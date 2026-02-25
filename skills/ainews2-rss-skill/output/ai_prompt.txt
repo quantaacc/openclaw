@@ -1,0 +1,1100 @@
+你是一位专业的 AI 资讯编辑，请根据以下 RSS 订阅源的昨日更新内容，生成一份结构化日报。
+
+**时间范围**: 2026-02-24 至 2026-02-25 22:36
+**文章总数**: 1000 篇
+**来源数量**: 263 个
+
+**来源分布 Top 15**:
+- lmarena.ai(@lmarena_ai): 27 篇
+- Yangyi(@Yangyixxxx): 20 篇
+- 宝玉(@dotey): 20 篇
+- Geek(@geekbb): 19 篇
+- OpenAI Developers(@OpenAIDevs): 19 篇
+- Berryxia.AI(@berryxia): 17 篇
+- 傅盛(@FuSheng_0306): 15 篇
+- Ado(@adocomplete): 15 篇
+- Y Combinator(@ycombinator): 15 篇
+- 爱范儿: 14 篇
+- 向阳乔木(@vista8): 13 篇
+- Akshay Kothari(@akothari): 13 篇
+- The Rundown AI(@TheRundownAI): 12 篇
+- meng shao(@shao__meng): 12 篇
+- Peter Yang(@petergyang): 12 篇
+
+---
+
+**文章列表**:
+
+1. **Introducing Expressive Mode for ElevenAgents**
+   来源: ElevenLabs Blog | 时间: 2026-02-25 22:35
+   链接: https://elevenlabs.io/blog/introducing-expressive-mode
+   摘要: More expressive voice agents, built for real-world customer conversations.
+
+2. **一句话生成知识网站的Skill开源了！
+
+快捷安装指令
+npx skills add joeseesun/knowledge-site-creator
+
+Github地址：
+https://t.co/...**
+   来源: 向阳乔木(@vista8) | 时间: 2026-02-25 22:14
+   链接: https://x.com/vista8/status/2026662172445880741
+   摘要: 一句话生成知识网站的Skill开源了！快捷安装指令npx skills add joeseesun/knowledge-site-creatorGithub地址：github.com/joeseesun/know…演示网站① word.qiaomu.ai - 通过词根拆解，高效记忆英语单词，基于新东方词根词缀电子书生成。② wudai.qiaomu.ai - 从后梁到后周，系统学习五代十国历史脉络，基于网络检索信息生成。③ designrule.qiaomu.ai - 掌握 CRAP 原则，提升设计品味，指定书名生成。④ llmwords.qiaomu.ai - AI 时代必备，30 个核心概
+
+3. **Compared to my IRS office**
+   来源: Sahil Lavingia(@shl) | 时间: 2026-02-25 22:11
+   链接: https://x.com/shl/status/2026661445962727431
+   摘要: Compared to my IRS officeSahil Lavingia@shlGumroad / Antiwork office, NYC🔗 View Quoted Tweet💬2🔄0❤️15👀1744📊3⚡ Powered by xgo.ing
+
+4. **🔥真是被气炸了！有时候我们吐槽有些厂商耍流氓，其实我给你们举个Apple的骚操作😂 （📺含视频）
+
+虽然我自己工作天天跟Apple打交道，但有时候也真的无语到家。
+
+比如这个没人吐槽的“强制升级...**
+   来源: Berryxia.AI(@berryxia) | 时间: 2026-02-25 22:11
+   链接: https://x.com/berryxia/status/2026661417311678679
+   摘要: 🔥真是被气炸了！有时候我们吐槽有些厂商耍流氓，其实我给你们举个Apple的骚操作😂 （📺含视频）虽然我自己工作天天跟Apple打交道，但有时候也真的无语到家。比如这个没人吐槽的“强制升级OS”套路，Apple玩得贼6：你不是直接逼你升级系统，而是等你日常要用Keynote、Numbers这些iWork三件套协作的时候，突然跳出来“想用最新版协作？先更新Keynote到最新吧！”我心想行啊，更新就更新呗。结果要更新Keynote，它又给你来一句：“要使用该版本的Keynote，必须先升级到最新macOS哈哈哈”我就问你，这个操作骚不骚？真是一环扣一环，服了服了！Your browser does
+
+5. **Dario Amodei | People by WTF**
+   来源: Nikhil Kamath | 时间: 2026-02-25 22:10
+   链接: https://www.youtube.com/shorts/sFoe29BssA0
+   摘要: #NikhilKamath Co-founder of Zerodha and Gruhas 
+Host of 'WTF is' & 'People By WTF' Podcast 
+Twitter: https://x.com/nikhilkamathcio/  
+Instagram:  https://www.instagram.com/nikhilkamathcio/
+LinkedIn: https://www.linkedin.com/in/nikhilkamathcio?utm_source=share&amp;utm_campaign=share_via&amp;utm_conte
+
+6. **Qwen3.5-35B-A3B is now in Jan 🔥**
+   来源: Qwen(@Alibaba_Qwen) | 时间: 2026-02-25 22:08
+   链接: https://x.com/Alibaba_Qwen/status/2026660582221558190
+   摘要: Qwen3.5-35B-A3B is now in Jan 🔥👋 Jan@jandotaiQwen3.5-35B-A3B is now in Jan 🔥It surpasses previous Qwen3 models more than 6× its size.Get the latest Jan atjan.aiAThanks to @Alibaba_Qwen for the base model and @ggerganov for llama.cpp 💛Your browser does not support the video tag.🔗 View on Twitter🔗 Vie
+
+7. **乔布斯诞辰 71 周年，他的 30 个朋友给我们写了封信**
+   来源: 爱范儿 | 时间: 2026-02-25 22:04
+   链接: https://www.ifanr.com/1655756?utm_source=rss&utm_medium=rss&utm_campaign=
+   摘要: 此刻，请你活在问题之中。或许有一天，在你未曾察觉之时，你已渐渐走入答案。#欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。
+爱范儿 |
+原文链接 ·
+查看评论 ·
+新浪微博
+
+8. **Exposing the Undercurrent: Disrupting the GRIDTIDE Global Cyber Espionage Campaign**
+   来源: Google Cloud Blog | 时间: 2026-02-25 22:00
+   链接: https://cloud.google.com/blog/topics/threat-intelligence/disrupting-gridtide-global-espionage-campaign/
+   摘要: Introduction
+Last week, Google Threat Intelligence Group (GTIG), Mandiant, and partners took action to disrupt a global espionage campaign targeting telecommunications and government organizations in dozens of nations across four continents. The threat actor, UNC2814, is a suspected People's Republi
+
+9. **Ads Decoded episode 3 explores how Google is reimagining Search ads experiences in a way that delivers value for both users and advertisers.**
+   来源: The Keyword (blog.google)  | 时间: 2026-02-25 22:00
+   链接: https://blog.google/products/ads-commerce/ads-decoded-reimagining-search-ads/
+   摘要: Ads Decoded explores how the updated Search ads experience aims to deliver value for both users and advertisers.
+
+10. **🐤 Jueves de Quack - Intro al Copilot CLI 🐤**
+   来源: GitHub | 时间: 2026-02-25 21:55
+   链接: https://www.youtube.com/watch?v=vkMLCIaoADI
+   摘要: GitHub Copilot ya no vive solo en el editor. También está en la terminal.
+
+En este stream vamos a empezar desde cero con el GitHub Copilot CLI: qué es, cómo funciona, y cómo puedes usarlo para convertir instrucciones en comandos reales, entender repositorios más rápido y automatizar tareas sin salir
+
+11. **现在veo3.1 真人可以随便用了吗？
+
+还是我太久没有做视频了 ！
+
+思考🤔**
+   来源: Berryxia.AI(@berryxia) | 时间: 2026-02-25 21:42
+   链接: https://x.com/berryxia/status/2026653938259472673
+   摘要: 现在veo3.1 真人可以随便用了吗？还是我太久没有做视频了 ！思考🤔Your browser does not support the video tag.🔗 View on Twitter💬1🔄0❤️11👀630📊3⚡ Powered by xgo.ing
+
+12. **群友铺TG机器人没收到消息
+自己让牛马AI去分析牛马AI程序下的main.log日志
+定位问题
+然后配合牛马AI的指导 人机协同解决
+最终把TG机器人搞通了
+
+真的是高手在民间👍🏻
+这个事情启发我...**
+   来源: Yangyi(@Yangyixxxx) | 时间: 2026-02-25 21:39
+   链接: https://x.com/yangyi/status/2026653294450659585
+   摘要: 群友铺TG机器人没收到消息自己让牛马AI去分析牛马AI程序下的main.log日志定位问题然后配合牛马AI的指导 人机协同解决最终把TG机器人搞通了真的是高手在民间👍🏻这个事情启发我了我的引导帮助助手也要加这个功能 帮用户定位问题💬0🔄0❤️2👀752📊1⚡ Powered by xgo.ing
+
+13. **https://t.co/K86kpsB54z**
+   来源: 傅盛(@FuSheng_0306) | 时间: 2026-02-25 21:34
+   链接: https://x.com/FuSheng_0306/status/2026651918303637832
+   摘要: x.com/i/article/2026…💬1🔄1❤️5👀643📊3⚡ Powered by xgo.ing
+
+14. **Contributing to open source has many benefits - but it doesn't guarantee you a job**
+   来源: freeCodeCamp.org | 时间: 2026-02-25 21:29
+   链接: https://www.youtube.com/shorts/4RGkpzTJjfg
+   摘要: Contributing to open source has many benefits - but it doesn't guarantee you a job. Tapas discusses this with Quincy - along with the many benefits of OSS contributions - on the freeCodeCamp podcast.
+
+15. **Upgrade now 👉 https://t.co/uTOnzfrxqW**
+   来源: LovartAI(@lovart_ai) | 时间: 2026-02-25 21:11
+   链接: https://x.com/lovart_ai/status/2026646258509647962
+   摘要: Upgrade now 👉lovart.aiW💬0🔄0❤️0👀221⚡ Powered by xgo.ing
+
+16. **🔥 Seedream 5.0 Lite is here
+
+→ Real-time web search
+→ Best-in-class edit precision
+→ Next-gen advan...**
+   来源: LovartAI(@lovart_ai) | 时间: 2026-02-25 21:10
+   链接: https://x.com/lovart_ai/status/2026645865356464497
+   摘要: 🔥 Seedream 5.0 Lite is here→ Real-time web search→ Best-in-class edit precision→ Next-gen advanced reasoning→ Unprecedented consistency(Yes, it might be better than Nano Banana Pro.)Monthly Ultimate + Annual Basic/Pro/Ultimate members get 7 days unlimited.Your browser does not support the video tag.
+
+17. **一百个 OpenClaw 产品涌来，我们最近推荐这几款**
+   来源: Founder Park | 时间: 2026-02-25 21:07
+   链接: https://mp.weixin.qq.com/s?__biz=Mzg5NTc0MjgwMw==&mid=2247522839&idx=1&sn=a522275172e405f388026842ee9de0d8
+   摘要: OpenClaw 开了一扇门。
+
+18. **If your financial future depends on one company continuing to need your work, you're very unprepared...**
+   来源: Justin Welsh(@thejustinwelsh) | 时间: 2026-02-25 21:02
+   链接: https://x.com/thejustinwelsh/status/2026643857408950719
+   摘要: If your financial future depends on one company continuing to need your work, you're very unprepared for what's coming.💬47🔄1❤️69👀2089📊45⚡ Powered by xgo.ing
+
+19. **5 OpenClaw agents run my home, finances, and code | Jesse Genet**
+   来源: How I AI | 时间: 2026-02-25 21:00
+   链接: https://www.youtube.com/watch?v=96Vl8s3EQhk
+   摘要: Jesse Genet is a homeschooling parent and entrepreneur who runs her household with five specialized OpenClaw agents. She layers them on top of her Obsidian “second brain,” deploys each on its own Mac Mini, and assigns every agent a distinct role—homeschool, finance, scheduling, development, and oper
+
+20. **和县里人相比
+城里人最大的不幸
+是缺少意义感
+
+县里人的意义
+在比较里
+有随时可接触的比较对象
+
+在城里
+你接触不到比较对象
+意义就塌缩了
+
+要不
+不去比较
+那么会更惨
+
+因为不去跟他人比较
+你的比较...**
+   来源: Frank Wang 玉伯(@lifesinger) | 时间: 2026-02-25 20:58
+   链接: https://x.com/lifesinger/status/2026642977683095925
+   摘要: 和县里人相比城里人最大的不幸是缺少意义感县里人的意义在比较里有随时可接触的比较对象在城里你接触不到比较对象意义就塌缩了要不不去比较那么会更惨因为不去跟他人比较你的比较对象就只剩下你自己和自己比要不延迟满足成为张一鸣然而没几个张一鸣于是成为更好的自己会发现一团糟的自己想清楚后不再比较会发现吃饭咸淡不识人就废了这就是现代人的悲剧一生💬2🔄0❤️4👀575📊3⚡ Powered by xgo.ing
+
+21. **Agent比软件高一个层级，本质就在于：你有没有真把它当人看，给它配备一台专属电脑。
+给足权限，它就活了：你在手机上和它聊，它在远端干，聊着聊着，你就把活干完了；加上Cron机制，它就是7x24小时主...**
+   来源: 傅盛(@FuSheng_0306) | 时间: 2026-02-25 20:55
+   链接: https://x.com/FuSheng_0306/status/2026642082308514034
+   摘要: Agent比软件高一个层级，本质就在于：你有没有真把它当人看，给它配备一台专属电脑。给足权限，它就活了：你在手机上和它聊，它在远端干，聊着聊着，你就把活干完了；加上Cron机制，它就是7x24小时主动工作的数字员工，而不是拨一下动一下的程序。Your browser does not support the video tag.🔗 View on Twitter💬2🔄1❤️13👀1539📊6⚡ Powered by xgo.ing
+
+22. **打了个盹
+梦见
+YouMind 收购了 Notion
+
+醒来
+是一场梦
+
+细想
+也不一定是梦**
+   来源: Frank Wang 玉伯(@lifesinger) | 时间: 2026-02-25 20:51
+   链接: https://x.com/lifesinger/status/2026641297713319969
+   摘要: 打了个盹梦见YouMind 收购了 Notion醒来是一场梦细想也不一定是梦💬10🔄0❤️13👀1031📊12⚡ Powered by xgo.ing
+
+23. **Woc!
+地有多大产，人就有多大胆!
+
+你看咱这个Manus 被Meta 收购后，立即就可以上一个台阶你敢信可以干到2w美金/月，哈哈
+
+这个是专门给政府部门专款专用的么？🤔**
+   来源: Berryxia.AI(@berryxia) | 时间: 2026-02-25 20:49
+   链接: https://x.com/berryxia/status/2026640796347519058
+   摘要: Woc!地有多大产，人就有多大胆!你看咱这个Manus 被Meta 收购后，立即就可以上一个台阶你敢信可以干到2w美金/月，哈哈这个是专门给政府部门专款专用的么？🤔💬6🔄1❤️7👀1316📊7⚡ Powered by xgo.ing
+
+24. **AI 能解决的社会问题
+凤角麟毛
+
+你懂了
+你笑了
+你就悟了**
+   来源: Frank Wang 玉伯(@lifesinger) | 时间: 2026-02-25 20:42
+   链接: https://x.com/lifesinger/status/2026638886584135948
+   摘要: AI 能解决的社会问题凤角麟毛你懂了你笑了你就悟了💬3🔄0❤️7👀674📊4⚡ Powered by xgo.ing
+
+25. **Migrating to Modular Monolith using Spring Modulith and IntelliJ IDEA**
+   来源: The JetBrains Blog | 时间: 2026-02-25 20:40
+   链接: https://blog.jetbrains.com/idea/2026/02/migrating-to-modular-monolith-using-spring-modulith-and-intellij-idea/
+   摘要: As applications grow in complexity, maintaining a clean architecture becomes increasingly challenging. The traditional package-by-layer approach of organizing code into controllers, services, repositories, and entities packages often leads to tightly coupled code that&#8217;s hard to maintain and ev
+
+26. **和县里人相比
+城里人最大的不幸
+是缺少意义感
+
+县里人的意义
+在比较里
+有随时可接触的比较对象
+
+在城里
+你接触不到比较对象
+意义就塌缩了
+
+要不
+不去比较
+那么会更惨
+
+因为不去跟他人比较
+你的比较...**
+   来源: Frank Wang 玉伯(@lifesinger) | 时间: 2026-02-25 20:39
+   链接: https://x.com/lifesinger/status/2026638118489636927
+   摘要: 和县里人相比城里人最大的不幸是缺少意义感县里人的意义在比较里有随时可接触的比较对象在城里你接触不到比较对象意义就塌缩了要不不去比较那么会更惨因为不去跟他人比较你的比较对象就只剩下你自己和自己比要不延迟满足成为张一鸣然而没几个张一鸣于是即时满足会发现一团糟的自己想清楚后不再比较会发现吃饭咸淡不识人就废了这就是现代人的悲剧一生💬0🔄0❤️2👀115⚡ Powered by xgo.ing
+
+27. **Slash commands turn best practices into repeatable workflows**
+   来源: How I AI | 时间: 2026-02-25 20:30
+   链接: https://www.youtube.com/shorts/PaLQgMEQdTY
+   摘要: You can encode common patterns—like creating a new prototype, running Figma-to-code, or deploying safely—into a single command. That shifts cognitive load away from remembering steps and toward building.
+
+28. **乔布斯「反对」的触屏 MacBook，为什么必然会来？**
+   来源: 爱范儿 | 时间: 2026-02-25 20:29
+   链接: https://www.ifanr.com/1655714?utm_source=rss&utm_medium=rss&utm_campaign=
+   摘要: 时隔五年，MacBook Pro 大升级#欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。
+爱范儿 |
+原文链接 ·
+查看评论 ·
+新浪微博
+
+29. **发版发的太快也不是好事儿
+不过我就想问一句 都这么能容忍bug吗
+是我太在意了吗**
+   来源: Yangyi(@Yangyixxxx) | 时间: 2026-02-25 20:28
+   链接: https://x.com/yangyi/status/2026635300936757433
+   摘要: 发版发的太快也不是好事儿不过我就想问一句 都这么能容忍bug吗是我太在意了吗💬7🔄0❤️4👀2436📊7⚡ Powered by xgo.ing
+
+30. **一句话将任意内容生成知识学习网站！部署Vercel访问
+
+Skill差不多搞定了，等这周优化后开源。
+
+刚AI做了测试，下图是基于《写给大家的设计书》生成的学习内容。
+
+地址：https://t.co...**
+   来源: 向阳乔木(@vista8) | 时间: 2026-02-25 20:27
+   链接: https://x.com/vista8/status/2026635083772555714
+   摘要: 一句话将任意内容生成知识学习网站！部署Vercel访问Skill差不多搞定了，等这周优化后开源。刚AI做了测试，下图是基于《写给大家的设计书》生成的学习内容。地址：design-aesthetics-workshop.vercel.app💬3🔄9❤️34👀3766📊20⚡ Powered by xgo.ing
+
+31. **让 Anthropic 破防的「蒸馏」风波，美国 AI 大牛泼冷水：中国 AI 成功不靠走捷径**
+   来源: 爱范儿 | 时间: 2026-02-25 20:27
+   链接: https://www.ifanr.com/1655804?utm_source=rss&utm_medium=rss&utm_campaign=
+   摘要: 蒸馏能帮你更快入场，但真要打到顶级水平，从来没有捷径。#欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。
+爱范儿 |
+原文链接 ·
+查看评论 ·
+新浪微博
+
+32. **这篇文章中值得学习的还是使用 AI 开发的方式，图中的过程总结一下，可以和 Stripe 那个对比看下：
+
+1 Plan 工程师和 AI 一起完成，定义项目架构、实现顺序、抽象设计，形成最终计划，注意...**
+   来源: Viking(@vikingmute) | 时间: 2026-02-25 20:21
+   链接: https://x.com/vikingmute/status/2026633702026129488
+   摘要: 这篇文章中值得学习的还是使用 AI 开发的方式，图中的过程总结一下，可以和 Stripe 那个对比看下：1 Plan 工程师和 AI 一起完成，定义项目架构、实现顺序、抽象设计，形成最终计划，注意要拆分成很详细的子任务2 完成其中的一个任务： 2.1 人类下达明确任务（如“实现next/navigation的shim，包含usePathname、useSearchParams、useRouter”） 2.2 AI自动生成实现代码 + 测试用例 2.3 运行完整测试 2.4 通过 → 自动合并 2.5 失败 → 把错误日志扔给AI，让它迭代修复 重复以上循环3 PR 审查 3.1 PR一打开 →
+
+33. **公众号用户喜欢看又臭又长的高谈阔论，大书特书未来文
+
+推特用户喜欢看又臭长的干货教程
+
+你们要找好定位…**
+   来源: 小互(@imxiaohu) | 时间: 2026-02-25 20:07
+   链接: https://x.com/xiaohu/status/2026630111383171272
+   摘要: 公众号用户喜欢看又臭又长的高谈阔论，大书特书未来文推特用户喜欢看又臭长的干货教程你们要找好定位…💬13🔄0❤️25👀2711📊17⚡ Powered by xgo.ing
+
+34. **Building LLM-Friendly MCP Tools in RubyMine: Pagination, Filtering, and Error Design**
+   来源: The JetBrains Blog | 时间: 2026-02-25 20:02
+   链接: https://blog.jetbrains.com/ruby/2026/02/rubymine-mcp-and-the-rails-toolset/
+   摘要: RubyMine enhances the developer experience with context-aware search features that make navigating a Rails application seamless, a powerful analysis engine that detects problems in the source code, and integrated support for the most popular version control systems. With AI becoming increasingly pop
+
+35. **深度解析悟空系统多机房部署共线改造**
+   来源: vivo互联网技术 | 时间: 2026-02-25 20:00
+   链接: https://mp.weixin.qq.com/s?__biz=MzI4NjY4MTU5Nw==&mid=2247506129&idx=1&sn=62c673826cdd0d1184dd47a0b4f74a93
+   摘要: 悟空作为一站式h5搭建平台，基于复用、提效的思路，探索多地区系统方案，实现多地区一体化运作。
+
+36. **开源V话：S1 OSPO 与开源 | x05 那层看不见的盾**
+   来源: vivo互联网技术 | 时间: 2026-02-25 20:00
+   链接: https://mp.weixin.qq.com/s?__biz=MzI4NjY4MTU5Nw==&mid=2247506129&idx=2&sn=bd6d6058b908e9d424429d234192a3c9
+   摘要: OSPO必须建立自动化的软件供应链安全体系。
+
+37. **No.190 🚕 滴滴：一战再战，改变出行 | 中国互联网故事16**
+   来源: 半拿铁 | 商业沉浮录 | 时间: 2026-02-25 20:00
+   链接: https://www.xiaoyuzhoufm.com/episode/699acfb5de29766da924dee1
+   摘要: 主播 | 刘飞 潇磊🚀感谢红色火箭赞助播出🚀 点击直达当程维用 8 万块钱找外包做出一个 App 时，身边少有人看好他要抢夺出租车市场的创业方向。当滴滴上线首日全北京只有 16 个司机在线时，没人能预料到未来这个平台将参与互联网史上最惨烈的战争之一。本期节目，我们回到 2012 年，在那个移动互联网的蛮荒时代，滴滴是如何靠着从北京的市场里杀出重围的？又是怎样与快的合并，并且打败 Uber 的？这不只是一家公司的成名史，更是一场资本与效率的终极博弈。一战再战的滴滴，与全球霸主 Uber 耗资百亿美金的近身肉搏后，遭遇顺风车事件与上市风波，进入沉寂与整改的阶段。滴滴是如何从一家狂奔的科技猛兽，变成
+
+38. **YC：Agent经济已来，新SaaS该做给Agent用**
+   来源: 随机小分队 | 时间: 2026-02-25 19:59
+   链接: https://mp.weixin.qq.com/s?__biz=MzI0NTAwMzU1MA==&mid=2247505309&idx=1&sn=ba7ea315a8a5904a5039e69fd63b6d10
+   摘要: 💡本期播客我们总结了三大 Takeaways：
+
+🤖 1. 当 Agent 掌握决策权：GTM 逻辑的彻底重构 
+如果说去年的 AI 还只是像 Cursor 那样的高级代码补全工具，那么现在的 Claude Code 和 OpenClaw 已经让人们开始真正信任并放权给 Agent 去做决策了。
+
+创始人开始用它全自动跑业务，工程师半夜挂着几个并行的 Worker 让机器自己干活，人类正有意识退出微观管理。 当 Agent 开始自主做决策，一个不容忽视的现实就摆在了所有 DevTools 和 SaaS 创业者面前：GTM 的底层逻辑改变了。 
+
+以前做增长盯口碑，目标客户是人。现在下一个大客户
+
+39. **Most AI logos feel generic.  
+
+V4 doesn’t.  
+
+It handles typography weight, spacing, and character n...**
+   来源: Recraft(@recraftai) | 时间: 2026-02-25 19:57
+   链接: https://x.com/recraftai/status/2026627670843244999
+   摘要: Most AI logos feel generic.  V4 doesn’t.  It handles typography weight, spacing, and character naturally, so the result feels intentional, not random.💬2🔄1❤️10👀375📊5⚡ Powered by xgo.ing
+
+40. **Elevate your workflow with Skywork Agents 👉 https://t.co/CIR0iT4g3T**
+   来源: Skywork(@Skywork_ai) | 时间: 2026-02-25 19:56
+   链接: https://x.com/Skywork_ai/status/2026627480732479865
+   摘要: Elevate your workflow with Skywork Agents 👉skywork.aiT💬0🔄0❤️2👀107⚡ Powered by xgo.ing
+
+41. **Skywork: Empowering Small Business Growth Chap 1 💐
+
+During an user interview, we met our user who i...**
+   来源: Skywork(@Skywork_ai) | 时间: 2026-02-25 19:56
+   链接: https://x.com/Skywork_ai/status/2026627476269707674
+   摘要: Skywork: Empowering Small Business Growth Chap 1 💐During an user interview, we met our user who is a flower shop owner. In this video, we’ll walk you through a full workday of her, demonstrating how Skywork Agents integrate every step of her business into a seamless workflow.Your browser does not su
+
+42. **做产品和做广告是两种基因。OpenAI最强的是模型，最弱的可能就是商业化。这条路不好走。**
+   来源: 傅盛(@FuSheng_0306) | 时间: 2026-02-25 19:53
+   链接: https://x.com/FuSheng_0306/status/2026626722775642289
+   摘要: 做产品和做广告是两种基因。OpenAI最强的是模型，最弱的可能就是商业化。这条路不好走。勃勃OC@bboczengOpenAI于2月推出ChatGPT广告测试，但这场备受期待的商业化尝试正遭遇一个&quot;仓促&quot;且&quot;混乱&quot;的开局。2月23日，UBS（瑞银）发布《ChatGPT广告专家电话会议纪要》，一位掌握约8亿美元数字广告预算的专家直言，ChatGPT广告体验&quot;比Google、Meta甚至Snapchat的早期还要糟糕&quot;。尽管市场寄望ChatGPT广告能撼动Google搜索的统治地位，但目前广告预算仅来自厂商的测试性支出（占总预算不到10%
+
+43. **我爱 notion agents！
+
+notion agents 让我快乐！**
+   来源: howie.serious(@howie_serious) | 时间: 2026-02-25 19:51
+   链接: https://x.com/howie_serious/status/2026626194356187622
+   摘要: 我爱 notion agents！notion agents 让我快乐！💬1🔄1❤️5👀1555📊2⚡ Powered by xgo.ing
+
+44. **Read more: https://t.co/E8mBwtQQ5i**
+   来源: The Rundown AI(@TheRundownAI) | 时间: 2026-02-25 19:30
+   链接: https://x.com/TheRundownAI/status/2026620746320040001
+   摘要: Read more: therundown.ai/p/pentagon-hit…💬1🔄0❤️1👀1097📊1⚡ Powered by xgo.ing
+
+45. **Top stories in AI today: 
+
+- Pentagon hits Claude with ultimatum over guardrails
+- New AI learns any...**
+   来源: The Rundown AI(@TheRundownAI) | 时间: 2026-02-25 19:30
+   链接: https://x.com/TheRundownAI/status/2026620742578622494
+   摘要: Top stories in AI today: - Pentagon hits Claude with ultimatum over guardrails- New AI learns any computer task by watching videos- Translate videos into any language with AI- Cowork gets agentic tools across departments- 4 new AI tools, community workflows, and more💬1🔄1❤️4👀1345📊2⚡ Powered by xgo.in
+
+46. **提问者和 AI 不是竞争关系。
+
+问题创造一片空间，AI 搜索那片空间。**
+   来源: 李继刚(@lijigang_com) | 时间: 2026-02-25 19:28
+   链接: https://x.com/lijigang/status/2026620317171638619
+   摘要: 提问者和 AI 不是竞争关系。问题创造一片空间，AI 搜索那片空间。💬2🔄3❤️12👀1400📊5⚡ Powered by xgo.ing
+
+47. **现在每天各种新的产品层出不穷啊，眼花缭乱了都，
+Vercel 推出了这个 Chat SDK 也非常棒啊，
+https://t.co/QKDPT8VgH7
+
+一个用 ts 写的 unified SDK，...**
+   来源: Viking(@vikingmute) | 时间: 2026-02-25 19:19
+   链接: https://x.com/vikingmute/status/2026618022212092102
+   摘要: 现在每天各种新的产品层出不穷啊，眼花缭乱了都，Vercel 推出了这个 Chat SDK 也非常棒啊，chat-sdk.dev一个用 ts 写的 unified SDK，用来实现各种聊天软件中  bot 的控制，现在已经支持 Slack, Microsoft Teams, Google Chat, Discord 等等。OpenClaw 已经把 telegram 机器人带火了，未来肯定有越来越多这样的需求的，所以这个库出的真的是恰到好处。Vercel Developers@vercel_devYou can now write chat bot logic once, and deploy a
+
+48. **每个月花5千，2026我还会忍痛笑着订阅的AI产品第二篇！**
+   来源: 卡尔的AI沃茨 | 时间: 2026-02-25 19:15
+   链接: https://mp.weixin.qq.com/s?__biz=Mzg3MTk3NzYzNw==&mid=2247505091&idx=1&sn=f2c23c1d1b8ebe54981078d5a89ff967
+   摘要: 
+
+49. **错把45万当300块送人，这个AI靠“手滑”成了顶流**
+   来源: 乌鸦智能说 | 时间: 2026-02-25 19:01
+   链接: https://mp.weixin.qq.com/s?__biz=MzkyNTY1MjE2OA==&mid=2247493351&idx=1&sn=3b40aebcf66d213a441a97a317cca05a
+   摘要: AI逆子，在线撒钱
+
+50. **Python Essentials for AI Agents – Tutorial**
+   来源: freeCodeCamp.org | 时间: 2026-02-25 19:00
+   链接: https://www.youtube.com/watch?v=UsfpzxZNsPo
+   摘要: This Python course will help you master the technical stack behind autonomous intelligence. This course is designed to take you from the core syntax of Python through the complexities of data handling and API integration, culminating in the deployment of sophisticated Large Language Models. You will
+
+51. **Ollama now supports Qwen 3.5 Medium Model Series!🚀**
+   来源: Qwen(@Alibaba_Qwen) | 时间: 2026-02-25 18:57
+   链接: https://x.com/Alibaba_Qwen/status/2026612617918427499
+   摘要: Ollama now supports Qwen 3.5 Medium Model Series!🚀ollama@ollamaQwen 3.5 family is here! &gt; vision built-in, and can outperform previous VL models&gt; designed to be more efficient&gt; expanded support for more languages  35B: (fits on 24GB+ system) ollama run qwen3.5:35b 122B: ollama run qwen3.5:1
+
+52. **MiniMax 发布了 MaxClaw (MiniMax 版 OpenClaw)
+
+没有部署过程，不需要额外输入 API Key，对非开发背景的朋友很友好，比如人事、财务等职位的朋友们
+
+启用后第一步...**
+   来源: meng shao(@shao__meng) | 时间: 2026-02-25 18:55
+   链接: https://x.com/shao__meng/status/2026612006225395923
+   摘要: MiniMax 发布了 MaxClaw (MiniMax 版 OpenClaw)没有部署过程，不需要额外输入 API Key，对非开发背景的朋友很友好，比如人事、财务等职位的朋友们启用后第一步先输入 Connect ** 平台，实测飞书平台机器人的配置到开通能对话，大概 10 分钟内，中间过程每个步骤都会有对应的信息可以粘贴或链接跳转去配置。我现在 MiniMax 平台是 Free 版本，正常可用，不确定后面官方会有订阅版区分吗？ @MiniMax_AIMiniMax_Agent@MiniMaxAgentMeet MaxClaw🦞OpenClaw × MiniMax Agent × M2.5,
+
+53. **是的，整个时间线全是 ai 洗稿的教程 🤣
+
+推特信息流 2026 加速污染，超过预期。**
+   来源: howie.serious(@howie_serious) | 时间: 2026-02-25 18:39
+   链接: https://x.com/howie_serious/status/2026607946193592385
+   摘要: 是的，整个时间线全是 ai 洗稿的教程 🤣推特信息流 2026 加速污染，超过预期。加密韋馱｜Skanda 🔶@thecryptoskanda现在是不是嘴撸都变成龙虾教程老师了？妈的整个时间线全是ai洗稿的教程🔗 View Quoted Tweet💬1🔄1❤️9👀2347📊3⚡ Powered by xgo.ing
+
+54. **莲花 CEO 冯擎峰：驯服赛道上的猛兽，克制追逐规模的野心**
+   来源: 晚点LatePost | 时间: 2026-02-25 18:35
+   链接: https://mp.weixin.qq.com/s?__biz=MzU3Mjk1OTQ0Ng==&mid=2247533557&idx=1&sn=4b8a4ef32bca4b46790debd51339fc60
+   摘要: 造一台直线加速极快的车很容易，造一台在极限状态下依然受控的性能车很难。
+
+55. **今日开源（2026-2-25）：Ring-2.5架构革新，混合线性注意力赋能万亿参数，长效Agent执行能力拉满**
+   来源: 机器之心SOTA模型 | 时间: 2026-02-25 18:31
+   链接: https://mp.weixin.qq.com/s?__biz=MzkyMzcwMDIyMQ==&mid=2247501647&idx=1&sn=b429f50a6360fc5d20fb1d6cdd4bf404
+   摘要: 万亿参数思维模型Ring-2.5，文档解析的模型Youtu-Parsing，多模态时间序列基础模型Aurora，科学计算工具包OneScience，基准测试平台SSI-Bench，文本到图像生成框架ArcFlow
+
+56. **Sentinel Java客户端限流原理解析｜得物技术**
+   来源: 得物技术 | 时间: 2026-02-25 18:30
+   链接: https://mp.weixin.qq.com/s?__biz=MzkxNTE3ODU0NA==&mid=2247543276&idx=1&sn=afc76725398e7dc2f36e27473bc18832
+   摘要: 从一次HTTP请求切入，拆解Sentinel限流完整源码，涵盖规则加载、过滤器拦截、插槽链运转及滑动窗口实现，深入理解限流底层逻辑，解决仅会使用而不懂原理的问题。
+
+57. **Qwen3.5 中等规模模型系列正式开源：更强智能，更低算力**
+   来源: 魔搭ModelScope社区 | 时间: 2026-02-25 18:16
+   链接: https://mp.weixin.qq.com/s?__biz=Mzk3NTc1NTU0Mw==&mid=2247505505&idx=1&sn=66d74352905c56a1a9e53c04a3718cf1
+   摘要: 更低算力实现超越旧版旗舰模型的更强智能
+
+58. **Model page: 
+https://t.co/lbUGBHyKZC**
+   来源: ollama(@ollama) | 时间: 2026-02-25 18:03
+   链接: https://x.com/ollama/status/2026598946412617948
+   摘要: Model page: ollama.com/library/qwen3.5💬0🔄0❤️16👀2756📊2⚡ Powered by xgo.ing
+
+59. **Qwen 3.5 family is here! 
+
+> vision built-in, and can outperform previous VL models
+> designed to be...**
+   来源: ollama(@ollama) | 时间: 2026-02-25 18:03
+   链接: https://x.com/ollama/status/2026598944177009147
+   摘要: Qwen 3.5 family is here! &gt; vision built-in, and can outperform previous VL models&gt; designed to be more efficient&gt; expanded support for more languages  35B: (fits on 24GB+ system) ollama run qwen3.5:35b 122B: ollama run qwen3.5:122b 397B (cloud only): ollama run qwen3.5:397b-cloud💬20🔄24❤️204
+
+60. **阿里云的 Coding Plan，直接掀桌子了。**
+   来源: AI产品阿颖 | 时间: 2026-02-25 18:00
+   链接: https://mp.weixin.qq.com/s?__biz=Mzg5Mjc3MjIyMA==&mid=2247580433&idx=1&sn=b319b48282567137c9c518fb5df0a0a1
+   摘要: 
+
+61. **Google Brings Its Developer Documentation Into the Age of AI Agents**
+   来源: InfoQ | 时间: 2026-02-25 18:00
+   链接: https://www.infoq.com/news/2026/02/google-documentation-ai-agents/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global
+   摘要: Google has announced the public preview of the Developer Knowledge API. It comes with a Model Context Protocol (MCP) server. This gives AI development tools a simple, machine-readable way to reach Google's official developer documentation. By Claudio Masolo
+
+62. **Airbnb房东入住时直接给客人推销自己用做的Agent产品了。以前创业要融资、组团队、买流量，现在一个人用AI就能从零做出产品。创业的基础设施彻底变了，"一人公司"从概念变成现实。这种事会越来越多。**
+   来源: 傅盛(@FuSheng_0306) | 时间: 2026-02-25 17:50
+   链接: https://x.com/FuSheng_0306/status/2026595547537354858
+   摘要: Airbnb房东入住时直接给客人推销自己用做的Agent产品了。以前创业要融资、组团队、买流量，现在一个人用AI就能从零做出产品。创业的基础设施彻底变了，&quot;一人公司&quot;从概念变成现实。这种事会越来越多。Ben Lang@benlnFirst time getting pitched by my Airbnb host🔗 View Quoted Tweet💬3🔄3❤️9👀3292📊5⚡ Powered by xgo.ing
+
+63. **Remember: HF is the best place to share datasets of LLM and Agent conversations**
+   来源: Julien Chaumond(@julien_c) | 时间: 2026-02-25 17:40
+   链接: https://x.com/julien_c/status/2026593221569020138
+   摘要: Remember: HF is the best place to share datasets of LLM and Agent conversationsPOM@peteromalletDeepseek got called out for scraping 150k Claude messages. So I'm releasing 155k of my personal Claude Code messages with Opus 4.5.I'm also open sourcing tooling to help you fetch your data, redact sensiti
+
+64. **感谢 @onehopeA9 推荐的 browserwing，让🦞自己搜索安装就可以。**
+   来源: orange.ai(@oran_ge) | 时间: 2026-02-25 17:37
+   链接: https://x.com/oran_ge/status/2026592487096406386
+   摘要: 感谢 @onehopeA9 推荐的 browserwing，让🦞自己搜索安装就可以。💬1🔄3❤️33👀4200📊12⚡ Powered by xgo.ing
+
+65. **过年都在写这个，尝试梳理 2026 年的 Agent 发生了什么变化
+
+我过年写了一篇一万字的文章，如果你最近很焦虑建议看看。
+
+我会尝试告诉你这一个月 AI 领域发生了什么，为什么大家都这么焦虑。这...**
+   来源: 歸藏(guizang.ai)(@op7418) | 时间: 2026-02-25 17:37
+   链接: https://x.com/op7418/status/2026592396486782986
+   摘要: 过年都在写这个，尝试梳理 2026 年的 Agent 发生了什么变化我过年写了一篇一万字的文章，如果你最近很焦虑建议看看。我会尝试告诉你这一个月 AI 领域发生了什么，为什么大家都这么焦虑。这些变化可能会带来什么影响歸藏(guizang.ai)@op7418x.com/i/article/2026…🔗 View Quoted Tweet💬3🔄5❤️32👀12019📊9⚡ Powered by xgo.ing
+
+66. **AI真人数字人语音对话性能优化实践总结**
+   来源: 大淘宝技术 | 时间: 2026-02-25 17:37
+   链接: https://mp.weixin.qq.com/s?__biz=MzAxNDEwNjk5OQ==&mid=2650542923&idx=1&sn=1403311c090693a4dc684ca861e515b6
+   摘要: 本文总结了为解决 AI 数字人导购对话中的回答延迟感而进行的性能优化实践。
+
+67. **给 🦞 装好浏览器插件装了之后，帮我上网冲浪看东西做播客什么的就都可以了。
+比搜索确实有用得多。**
+   来源: orange.ai(@oran_ge) | 时间: 2026-02-25 17:36
+   链接: https://x.com/oran_ge/status/2026592026666611113
+   摘要: 给 🦞 装好浏览器插件装了之后，帮我上网冲浪看东西做播客什么的就都可以了。比搜索确实有用得多。💬7🔄11❤️68👀13282📊25⚡ Powered by xgo.ing
+
+68. **醒醒，APP的时代要翻篇了！大模型只是智商水平，OpenClaw才是进化大脑，不用等大模型出新版本，它自己就能把自己进化成一套系统。比起花几十万买个只能用1%功能的臃肿软件，这种能把业务线全拧成一股绳...**
+   来源: 傅盛(@FuSheng_0306) | 时间: 2026-02-25 17:34
+   链接: https://x.com/FuSheng_0306/status/2026591576903004385
+   摘要: 醒醒，APP的时代要翻篇了！大模型只是智商水平，OpenClaw才是进化大脑，不用等大模型出新版本，它自己就能把自己进化成一套系统。比起花几十万买个只能用1%功能的臃肿软件，这种能把业务线全拧成一股绳的工具才是真降维打击。Your browser does not support the video tag.🔗 View on Twitter💬10🔄8❤️54👀9808📊26⚡ Powered by xgo.ing
+
+69. **作为 MiniMax 的老用户，我也要来试试MaxClaw这只新🦞！**
+   来源: 马东锡 NLP(@dongxi_nlp) | 时间: 2026-02-25 17:34
+   链接: https://x.com/dongxi_nlp/status/2026591567239090251
+   摘要: 作为 MiniMax 的老用户，我也要来试试MaxClaw这只新🦞！MiniMax (official)@MiniMax_AI🐙MaxClaw🦞: OpenClaw × MiniMax Agent × M2.5agent.minimax.io8w🔗 View Quoted Tweet💬1🔄0❤️10👀5593📊3⚡ Powered by xgo.ing
+
+70. **4900 万人围观的 Claude Cowork 又杀疯了，10 个顶级外挂上线，这些打工人危**
+   来源: 爱范儿 | 时间: 2026-02-25 17:20
+   链接: https://www.ifanr.com/1655712?utm_source=rss&utm_medium=rss&utm_campaign=
+   摘要: 不是裁员，是再也不需要招那么多新人了#欢迎关注爱范儿官方微信公众号：爱范儿（微信号：ifanr），更多精彩内容第一时间为您奉上。
+爱范儿 |
+原文链接 ·
+查看评论 ·
+新浪微博
+
+71. **Claude Code Remote Control: RIP OpenClaw!? This New Claude Code Feature is CRAZY!**
+   来源: AICodeKing | 时间: 2026-02-25 17:15
+   链接: https://www.youtube.com/watch?v=7gI4Wm68Fy0
+   摘要: In this video, I'll be telling you about Anthropic's new Remote Control feature for Claude Code, which lets you control your coding sessions from your phone while everything still runs locally on your machine.
+
+--
+Key Takeaways:
+
+📱 Claude Code's new Remote Control feature lets you manage coding sess
+
+72. **ICLR 2026 Oral｜火山引擎多媒体实验室提出RALI，探索画质理解大模型泛化性，节约96%开销助力实时部署**
+   来源: 字节跳动技术团队 | 时间: 2026-02-25 17:04
+   链接: https://mp.weixin.qq.com/s?__biz=MzI1MzYzMjE0MQ==&mid=2247518549&idx=1&sn=b721b51e0f9341fb490b61bfa20014a0
+   摘要: 
+
+73. **Presentation: Achieve Optimal Efficiency for Your Developer Experience Teams**
+   来源: InfoQ | 时间: 2026-02-25 17:00
+   链接: https://www.infoq.com/presentations/optimal-efficiency-devex/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global
+   摘要: Fabien Deshayes discusses the strategies behind Monzo’s Developer Velocity squad. He explains the "Platform as a Product" mindset, emphasizing the need for engineers with product acumen and tenure. He shares actionable frameworks for measuring DevEx impact through time, money, and cognitive load, de
+
+74. **如果 llm 是一个“人” ……
+
+三大前沿 llm 的“人选”都符合我目前的主观感受。
+
+不过，grok 这个🤣**
+   来源: howie.serious(@howie_serious) | 时间: 2026-02-25 16:51
+   链接: https://x.com/howie_serious/status/2026580816302846398
+   摘要: 如果 llm 是一个“人” ……三大前沿 llm 的“人选”都符合我目前的主观感受。不过，grok 这个🤣💬8🔄4❤️63👀12870📊17⚡ Powered by xgo.ing
+
+75. **OpenAI Builders Unscripted Ep.1
+主持人 @romainhuet 嘉宾 @steipete
+https://t.co/X4PeW5Wtwd
+
+刚刚宣布加入 OpenAI ...**
+   来源: meng shao(@shao__meng) | 时间: 2026-02-25 16:42
+   链接: https://x.com/shao__meng/status/2026578565731614747
+   摘要: OpenAI Builders Unscripted Ep.1主持人 @romainhuet 嘉宾 @steipeteyoutube.com/watch?v=9jgcT0…刚刚宣布加入 OpenAI 的 Peter，在这次访谈中阐述了自己 13 年创业经历、Burnout 阶段、因为 AI 编程而回归、OpenClaw 的诞生、对 AI 开发的观点等，最后还有给开发者们的忠告。Peter Steinberger 人物背景2011 年创建 PSPDFKit，围绕它运营公司 13 年后出售。经历严重倦怠后休整，2024 年重返技术领域，用 AI 工具在不到一年内创建了 40 多个项目，最终整合为 
+
+76. **Dario再发偏颇抹黑言论：中国模型都是为跑分优化的！曝：在ChatGPT发布之前因公司理念按下Claude1没发，丢掉C端市场；数据已不再是护城河**
+   来源: 51CTO技术栈 | 时间: 2026-02-25 16:25
+   链接: https://mp.weixin.qq.com/s?__biz=MjM5ODI5Njc2MA==&mid=2655936610&idx=1&sn=6e94552cf447868a98764175aa71f3da
+   摘要: 时不时就对中国模型大发偏颇言论的Dario，到底怎么想的
+
+77. **Salesforce押注Anthropic，但讽刺的是，AI可能正在让Salesforce自己变得多余。本质上AI是对过去工具的完全重塑——你花100%的钱买了个庞大的CRM，实际只用了1%的功能。未...**
+   来源: 傅盛(@FuSheng_0306) | 时间: 2026-02-25 16:15
+   链接: https://x.com/FuSheng_0306/status/2026571742345572807
+   摘要: Salesforce押注Anthropic，但讽刺的是，AI可能正在让Salesforce自己变得多余。本质上AI是对过去工具的完全重塑——你花100%的钱买了个庞大的CRM，实际只用了1%的功能。未来很多东西根据组织需要现写就行，不需要APP，不需要CRM。Salesforce股价一直在跌，市场已经在投票了。Marc Benioff@BenioffExcited to work closely with Dario, Daniella, and their entire Anthropic team to bring this incredible vision to life — Sale
+
+78. **#435.从旋转棒棒糖到4.75亿美金：探秘旋转电动牙刷**
+   来源: 跨国串门儿计划 | 时间: 2026-02-25 16:11
+   链接: https://www.xiaoyuzhoufm.com/episode/699eae2fa22480add607cded
+   摘要: 📝 本期播客简介本期我们克隆了：顶尖创业播客《How I Built This with Guy Raz》Spinbrush: John Osher. The Electric Toothbrush That Sold for $475M本期嘉宾 John Osher 的创业生涯是一部关于“降维打击”的教科书。他不仅是一位连环创业者，更是一位洞察市场缝隙的天才发明家。他曾先后将三家公司分别卖给婴儿用品巨头 Gerber、玩具巨头 Hasbro 以及消费品巨头宝洁（P&amp;G）。他最传奇的战绩，是利用生产旋转棒棒糖积累的廉价电机和电池供应链，将原本动辄上百美元的电动牙刷，做成了在沃尔玛仅售 
+
+79. **How to make OpenClaw 10x more personalized:
+
+1. Record your meetings and conversations
+2. Give trans...**
+   来源: Zara Zhang(@zarazhangrui) | 时间: 2026-02-25 16:08
+   链接: https://x.com/zarazhangrui/status/2026570000824414359
+   摘要: How to make OpenClaw 10x more personalized:1. Record your meetings and conversations2. Give transcripts to OpenClaw3. Ask OpenClaw: based on my transcripts, what can you do to make my life better?💬8🔄4❤️45👀3353📊20⚡ Powered by xgo.ing
+
+80. **春节七天，我带着一只AI龙虾搞了个实验：每天选题、写稿、发公众号、发X。粉丝涨了，每天发布，阅读创新高。
+大年初八，市场部十几个人回来上班。
+然后，公众号断更了。
+我那心里啊，万马奔腾。好吧，都是老板...**
+   来源: 傅盛(@FuSheng_0306) | 时间: 2026-02-25 16:07
+   链接: https://x.com/FuSheng_0306/status/2026569765989523665
+   摘要: 春节七天，我带着一只AI龙虾搞了个实验：每天选题、写稿、发公众号、发X。粉丝涨了，每天发布，阅读创新高。大年初八，市场部十几个人回来上班。然后，公众号断更了。我那心里啊，万马奔腾。好吧，都是老板的错，我只好亲自写付对联，直抒胸臆！最绝的是横批，一语双关！（只有横批是AI写的🤣）💬9🔄0❤️12👀2972📊11⚡ Powered by xgo.ing
+
+81. **Assignments for CS146S: The Modern Software Dev (Stanford University Fall 2025)
+https://t.co/BI3DlRv...**
+   来源: 宝玉(@dotey) | 时间: 2026-02-25 16:01
+   链接: https://x.com/dotey/status/2026568217175404746
+   摘要: Assignments for CS146S: The Modern Software Dev (Stanford University Fall 2025)x.com/i_rissun/statu…i rissun@i_rissun@dotey github上有这个老师公开这门课的作业练习，可以跟着做 github.com/mihail911/mode…🔗 View Quoted Tweet💬1🔄0❤️7👀4414📊4⚡ Powered by xgo.ing
+
+82. **I've been thinking about why so many people aren't using AI to learn new things.
+
+It's not that the ...**
+   来源: Zara Zhang(@zarazhangrui) | 时间: 2026-02-25 16:00
+   链接: https://x.com/zarazhangrui/status/2026568055372026351
+   摘要: I've been thinking about why so many people aren't using AI to learn new things.It's not that the tools aren't good enough. It's that we're still looking for the old structures: the syllabus, the expert instructor, the curated textbook.But AI fundamentally changes what's possible. You don't need to 
+
+83. **改进 OpenClaw 和 NanoBot，从单用户到多租户：我如何构建一个安全隔离的AI助手平台**
+   来源: AINLP | 时间: 2026-02-25 15:58
+   链接: https://mp.weixin.qq.com/s?__biz=MjM5ODkzMzMwMQ==&mid=2650451029&idx=1&sn=aebd9d76e80a83309c66235e1fb27b55
+   摘要: 本文介绍BusinessBot（基于nanobot）的技术架构——一个支持多租户隔离部署的AI助手平台
+
+84. **Check out Grok-4.20-Beta1 vs. all the best frontier ai at https://t.co/yZiJuG8ica**
+   来源: lmarena.ai(@lmarena_ai) | 时间: 2026-02-25 15:55
+   链接: https://x.com/arena/status/2026566777405354462
+   摘要: Check out Grok-4.20-Beta1 vs. all the best frontier ai at arena.ai💬0🔄0❤️15👀4282📊2⚡ Powered by xgo.ing
+
+85. **Grok 4.20 beta1 (single agent) debuts #1 on Search Arena, and #4 overall in Text Arena!
+
+Highlights:...**
+   来源: lmarena.ai(@lmarena_ai) | 时间: 2026-02-25 15:55
+   链接: https://x.com/arena/status/2026566773496230383
+   摘要: Grok 4.20 beta1 (single agent) debuts #1 on Search Arena, and #4 overall in Text Arena!Highlights:- #1 in Search, scoring 1226, leading GPT-5.2 and Gemini-3- #4 in Text, scoring 1492 on par with Gemini 3.1 ProCongrats to the @xAI team and @elonmusk on this impressive milestone!💬48🔄39❤️413👀368937📊93⚡
+
+86. **In the Text Arena, Grok-4.20-Beta1 ranks #4, scoring 1492 closing the gap to Gemini 3.1 Pro**
+   来源: lmarena.ai(@lmarena_ai) | 时间: 2026-02-25 15:55
+   链接: https://x.com/arena/status/2026566775928926401
+   摘要: In the Text Arena, Grok-4.20-Beta1 ranks #4, scoring 1492 closing the gap to Gemini 3.1 Pro💬3🔄0❤️33👀5297📊5⚡ Powered by xgo.ing
+
+87. **Agreed.  Mass surveillance violates the Fourth Amendment and has a chilling effect on freedom of exp...**
+   来源: Jeff Dean(@JeffDean) | 时间: 2026-02-25 15:54
+   链接: https://x.com/JeffDean/status/2026566490619879574
+   摘要: Agreed.  Mass surveillance violates the Fourth Amendment and has a chilling effect on freedom of expression. Surveillance systems are prone to misuse for political or discriminatory purposes.Boaz Barak@boazbaraktcsAs an American citizen, the last thing I want is government using AI for mass surveill
+
+88. **https://t.co/cWuygSAY95**
+   来源: 宝玉(@dotey) | 时间: 2026-02-25 15:48
+   链接: https://x.com/dotey/status/2026564921429839991
+   摘要: x.com/i/article/2026…💬5🔄28❤️166👀22031📊67⚡ Powered by xgo.ing
+
+89. **DeepSeek V4 压顶，Anthropic CEO 先动手了：一场漏洞百出的舆论战，从构陷到翻车**
+   来源: InfoQ 中文 | 时间: 2026-02-25 15:46
+   链接: https://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&mid=2651276307&idx=1&sn=430643f1becaa3f062743d454da1d911
+   摘要: 这段时间，华尔街造了“新神”Anthropic。
+
+90. **从上下文到长期记忆：大模型记忆工程的架构设计与实践**
+   来源: InfoQ 中文 | 时间: 2026-02-25 15:46
+   链接: https://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&mid=2651276307&idx=2&sn=bc69ed3bd600142d4e67f1a5df1103f4
+   摘要: 随着大模型在企业和行业场景中持续落地，“记忆”正在成为继参数调优和上下文工程之后的下一个工程化核心。
+
+91. **使用 AI 生成了 MVP，这对软件架构来说意味着什么**
+   来源: InfoQ 中文 | 时间: 2026-02-25 15:46
+   链接: https://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&mid=2651276307&idx=3&sn=005a7a3c0772076dbbde3a233f367073
+   摘要: AI生成的代码会带来隐含的架构决策，迫使团队依靠实验来验证质量属性。若想从 AI 中得到有效结果，团队必须清晰阐述设计权衡与推导逻辑，让模型能够生成符合预期  QAR 的方案。
+
+92. **Uber 和 OpenAI 重组了限流系统**
+   来源: InfoQ 中文 | 时间: 2026-02-25 15:46
+   链接: https://mp.weixin.qq.com/s?__biz=MjM5MDE0Mjc4MA==&mid=2651276307&idx=4&sn=5e1c43ea4a6e2fa36a77054777c6b5d2
+   摘要: 优步和OpenAI讨论了他们对限流方法的转变。
+
+93. **Looking forward to seeing our Brand Ambassador, @kawai_design, present about Skywork tonight using s...**
+   来源: Skywork(@Skywork_ai) | 时间: 2026-02-25 15:36
+   链接: https://x.com/Skywork_ai/status/2026561953372712979
+   摘要: Looking forward to seeing our Brand Ambassador, @kawai_design, present about Skywork tonight using slides generated by Skywork Slides Agent! 👏KAWAI@kawai_designマルチAIエージェントを起動するならSkywork（ @skywork_ai_jp  ）もオススメ汎用エージェントに広告の企画とプロンプトを作成してもらい、同チャット内で「広告画像」「広告動画」「Webサイト」「スライド」を専用エージェントで並列稼働。添付画像①：並列処理している
+
+94. **pro 完全不够用。已经乖乖开了max 5x 版本。125 美金，25 美金的苹果税🤣**
+   来源: howie.serious(@howie_serious) | 时间: 2026-02-25 15:35
+   链接: https://x.com/howie_serious/status/2026561670047531475
+   摘要: pro 完全不够用。已经乖乖开了max 5x 版本。125 美金，25 美金的苹果税🤣💬1🔄0❤️0👀1121📊1⚡ Powered by xgo.ing
+
+95. **学英语最有效方法是重复背诵高质量段落。
+
+但词汇量仍然是基础。
+
+上午学习 @jesselaunz ，也基于新东方高频词根词汇也做了个网站，支持一键部署Vercel、replit和Github pag...**
+   来源: 向阳乔木(@vista8) | 时间: 2026-02-25 15:23
+   链接: https://x.com/vista8/status/2026558733619241003
+   摘要: 学英语最有效方法是重复背诵高质量段落。但词汇量仍然是基础。上午学习 @jesselaunz ，也基于新东方高频词根词汇也做了个网站，支持一键部署Vercel、replit和Github page。另外，闪卡是科学证实少数对学习有帮助的实用工具。改天把项目写成Skill，一句话生成任何主题学习网站。体验地址 word.qiaomu.aiGithub开源 github.com/joeseesun/word…Your browser does not support the video tag.🔗 View on Twitter💬6🔄60❤️257👀22194📊122⚡ Powered by xgo
+
+96. **智谱、MiniMax市值震荡 3000亿过后估值生变**
+   来源: 深网腾讯新闻 | 时间: 2026-02-25 15:22
+   链接: https://mp.weixin.qq.com/s?__biz=MzIwMTY1NDg4Nw==&mid=2247524972&idx=1&sn=f9ccd3cf04f758f4dc872991760152d2
+   摘要: 马年港股开市4个交易日，国产大模型智谱、MiniMax走出从巅峰到深度回调的行情。
+
+2月20日，智谱单日暴涨42.72%，创上市以来新高；MiniMax上涨14.52%。两家企业市值双双突破3000亿港元，短暂超过京东、快手。
+
+行情在2月21日智谱发布GLM-5致歉信后急转直下。2月23日，其单日暴跌22.76%，MiniMax跟跌13.35%，当日二者市值合计蒸发近千亿港元；即便2月24日小幅反弹，也未能扭转颓势。截止发稿，今日MiniMax跌约10%、智谱跌约6%。
+
+“暴涨背后，本质是技术催化叠加资金结构放大的共振结果。”经济学家宋清辉表示，一方面，智谱推出GLM-5模型，在编程等基
+
+97. **突发！谷歌大规模封禁OpenClaw用户账号，开发者一夜「断粮」：“每月花250美元，被封却毫无预警”**
+   来源: CSDN | 时间: 2026-02-25 15:19
+   链接: https://mp.weixin.qq.com/s?__biz=MzkzMDY1NDgyOQ==&mid=2247828589&idx=1&sn=287281df4948358c65f23f184d8ed7ef
+   摘要: 这次的 Antigravity 风波，可能只是一个开始。
+
+98. **“我让Claude修一个小Bug，它却删了我的核心数据，还嘴硬说「啥也没丢」！”**
+   来源: CSDN | 时间: 2026-02-25 15:19
+   链接: https://mp.weixin.qq.com/s?__biz=MzkzMDY1NDgyOQ==&mid=2247828589&idx=2&sn=144d5d683e1f7e7f188a133bfb94d5c8
+   摘要: 你可以信任 AI，但记得一定要验证。
+
+99. **强化学习之父 Sutton 隔空回应 Hinton：目前的 AI “理解不足，调参有余”**
+   来源: CSDN | 时间: 2026-02-25 15:19
+   链接: https://mp.weixin.qq.com/s?__biz=MzkzMDY1NDgyOQ==&mid=2247828589&idx=3&sn=d0c01326408b7236f3210f95b150df5c
+   摘要: 目前 AI 处于“人类数据时代”，虽然强大但受限。
+
+100. **断腿在家休养，不忘认真学习AI。龙虾养成日记内部PDF版已经写完，欢迎私信索取**
+   来源: 傅盛(@FuSheng_0306) | 时间: 2026-02-25 15:14
+   链接: https://x.com/FuSheng_0306/status/2026556495173996914
+   摘要: 断腿在家休养，不忘认真学习AI。龙虾养成日记内部PDF版已经写完，欢迎私信索取💬25🔄1❤️41👀4730📊31⚡ Powered by xgo.ing
+
+101. **融资34亿！谷歌前TPU员工创业新型芯片，卡帕西也投了**
+   来源: 量子位 | 时间: 2026-02-25 15:08
+   链接: https://www.qbitai.com/2026/02/382058.html
+   摘要: 预计2027年出货
+
+102. **推荐 4 个 GitHub 上小众但实用的开源项目，收藏一波。**
+   来源: 逛逛GitHub | 时间: 2026-02-25 15:06
+   链接: https://mp.weixin.qq.com/s?__biz=MzUxNjg4NDEzNA==&mid=2247531632&idx=1&sn=edfe01eb6144d3f1b935cf66504db95b
+   摘要: 
+
+103. **Adaptive Data Governance for EU Regulatory Change**
+   来源: Databricks | 时间: 2026-02-25 15:00
+   链接: https://www.databricks.com/blog/adaptive-data-governance-eu-regulatory-change
+   摘要: The European Commission has proposed a new Digital Package, including a “Digital...
+
+104. **阿里发布三款中型千问3.5新模型，每百万Token低至0.2元**
+   来源: 量子位 | 时间: 2026-02-25 14:48
+   链接: https://www.qbitai.com/2026/02/382054.html
+   摘要: 消费级显卡也能跑
+
+105. **Handling emails yourself is outdated.
+
+Create your own email workflow, and AI will automate your ent...**
+   来源: Eric Jing(@ericjing_ai) | 时间: 2026-02-25 14:30
+   链接: https://x.com/ericjing_ai/status/2026545432546128329
+   摘要: Handling emails yourself is outdated.Create your own email workflow, and AI will automate your entire email system.Genspark@genspark_aiYou set the rules. AI does the work.Build your own workflow in Genspark AI Inbox and let AI triage your emails for you.Your browser does not support the video tag.🔗 
+
+106. **知名密码管理工具 1Password 近日向用户发送邮件宣布，将于 2026年3月27日 起大幅上调其年度订阅费用，其中个人版计划的价格涨幅高达33%。
+个人版 $35.88→$47.88  33%
+...**
+   来源: Geek(@geekbb) | 时间: 2026-02-25 14:12
+   链接: https://x.com/geekbb/status/2026540886113558847
+   摘要: 知名密码管理工具 1Password 近日向用户发送邮件宣布，将于 2026年3月27日 起大幅上调其年度订阅费用，其中个人版计划的价格涨幅高达33%。个人版 $35.88→$47.88  33%家庭版 $59.88→$71.88  20%听我的，赶紧在你的小鸡/NAS上部署体验一下 Vaultwarden，开启两步登录，你就知道之前的钱白花了！github.com/dani-garcia/va…💬35🔄30❤️209👀44542📊109⚡ Powered by xgo.ing
+
+107. **Another wonderful AI feature from Meta. Not creepy at all, I assure you. 
+
+Who decides to ship this ...**
+   来源: Peter Yang(@petergyang) | 时间: 2026-02-25 14:07
+   链接: https://x.com/petergyang/status/2026539555059646733
+   摘要: Another wonderful AI feature from Meta. Not creepy at all, I assure you. Who decides to ship this stuff?Your browser does not support the video tag.🔗 View on Twitter💬9🔄0❤️22👀2986📊11⚡ Powered by xgo.ing
+
+108. **jarred is cooking 🍳**
+   来源: cat(@_catwu) | 时间: 2026-02-25 14:01
+   链接: https://x.com/_catwu/status/2026538093323653216
+   摘要: jarred is cooking 🍳Jarred Sumner@jarredsumnerClaude Code's p99 memory usage dropped by 40x in the last two weeks, and by 6x since January - while growing rapidly &amp; continuing to ship tons of new features.🔗 View Quoted Tweet💬10🔄9❤️593👀161010📊77⚡ Powered by xgo.ing
+
+109. **中年男人突然爱健身，多半是外面有人了，突然总对着手机聊天、发呆、呵呵傻笑，那一定是学会用手机 vibe coding 了。。。**
+   来源: Ding(@dingyi) | 时间: 2026-02-25 14:00
+   链接: https://x.com/dingyi/status/2026537667920560534
+   摘要: 中年男人突然爱健身，多半是外面有人了，突然总对着手机聊天、发呆、呵呵傻笑，那一定是学会用手机 vibe coding 了。。。💬5🔄5❤️66👀9675📊12⚡ Powered by xgo.ing
+
+110. **A year ago, we had no idea if anyone would want an AI agent in their terminal. 
+
+Thank you for takin...**
+   来源: cat(@_catwu) | 时间: 2026-02-25 13:59
+   链接: https://x.com/_catwu/status/2026537477885014359
+   摘要: A year ago, we had no idea if anyone would want an AI agent in their terminal. Thank you for taking a chance on something new, for the feedback, and for building products with Claude Code that we never could have imagined.Excited for year 2 🛠️💬45🔄20❤️536👀24538📊111⚡ Powered by xgo.ing
+
+111. **AI越繁荣，经济越萧条！一夜爆火2028推演长文，引发华尔街巨头恐慌**
+   来源: 新智元 | 时间: 2026-02-25 13:58
+   链接: https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652677632&idx=1&sn=866a081863d4c74ba76b62b596aa135a
+   摘要: 
+
+112. **46.5万次盲测封王！Grok视频模型屠榜Arena，谷歌最强对手来了**
+   来源: 新智元 | 时间: 2026-02-25 13:58
+   链接: https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652677632&idx=2&sn=6e4f7fa59be80ecff686c18cfeb27726
+   摘要: 
+
+113. **Gemini 3仅得33.6分！清华发布首个「约束流形」空间智能基准**
+   来源: 新智元 | 时间: 2026-02-25 13:58
+   链接: https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652677632&idx=3&sn=0ab5b5c2c6a56e7b4f23f554de582437
+   摘要: 
+
+114. **"Be careful with /init" in long-form: https://t.co/GTDE1KVy2p**
+   来源: Addy Osmani(@addyosmani) | 时间: 2026-02-25 13:57
+   链接: https://x.com/addyosmani/status/2026536958378520928
+   摘要: &quot;Be careful with /init&quot; in long-form: addyosmani.com/blog/agents-md/💬2🔄0❤️17👀3364📊6⚡ Powered by xgo.ing
+
+115. **Honored that @Forbes shared our story today. Thank you to @annatonger for spending the time to under...**
+   来源: Luyu Zhang(@goocarlos) | 时间: 2026-02-25 13:56
+   链接: https://x.com/goocarlos/status/2026536744263495948
+   摘要: Honored that @Forbes shared our story today. Thank you to @annatonger for spending the time to understand Dify’s journey and where we’re headed next!Forbes@ForbesLuyu Zhang is part of a new wave of Chinese founders who are building at home but betting their companies in America.Read the full story:f
+
+116. **要我说部分领域AGI已经实现了：特斯拉扔掉了方向盘，编程也正被 AI 接管。像OpenClaw这种能自我进化的工具，本质上是在重塑开发逻辑。到2026年，97%的代码AI一遍就能写对，程序员如果不能驾...**
+   来源: 傅盛(@FuSheng_0306) | 时间: 2026-02-25 13:53
+   链接: https://x.com/FuSheng_0306/status/2026536072294039655
+   摘要: 要我说部分领域AGI已经实现了：特斯拉扔掉了方向盘，编程也正被 AI 接管。像OpenClaw这种能自我进化的工具，本质上是在重塑开发逻辑。到2026年，97%的代码AI一遍就能写对，程序员如果不能驾驭这种进化系统，真可能像阑尾一样，还存在但没啥大用。Your browser does not support the video tag.🔗 View on Twitter💬20🔄6❤️50👀18674📊35⚡ Powered by xgo.ing
+
+117. **The other person in this chat is me.
+
+I still love @openclaw but kinda tired of it forgetting things...**
+   来源: Peter Yang(@petergyang) | 时间: 2026-02-25 13:46
+   链接: https://x.com/petergyang/status/2026534368471298115
+   摘要: The other person in this chat is me.I still love @openclaw but kinda tired of it forgetting things all the time. Any tips to make this better?Nat Eliason@nateliasonFix your OpenClaw with this one simple trick🔗 View Quoted Tweet💬29🔄0❤️31👀9321📊24⚡ Powered by xgo.ing
+
+118. **龙虾之父新访谈，OpenClaw内幕公开！拦不住滥用，只劝大家别玩火**
+   来源: 量子位 | 时间: 2026-02-25 13:45
+   链接: https://www.qbitai.com/2026/02/382040.html
+   摘要: 
+
+119. **In Part 1, you learned how to use AI to identify your IP positioning based on real market signals. N...**
+   来源: Dify(@dify_ai) | 时间: 2026-02-25 13:44
+   链接: https://x.com/dify_ai/status/2026533854409011426
+   摘要: In Part 1, you learned how to use AI to identify your IP positioning based on real market signals. Now we move to the second step: turning that positioning into actual content.In this episode, we build a Dify workflow that searches high-performing content in your niche, analyzes structure and patter
+
+120. **1Password体验其实有很多改进空间，我都订了十年了，也没感觉优化了啥，居然还通知要涨价了……**
+   来源: Yangyi(@Yangyixxxx) | 时间: 2026-02-25 13:35
+   链接: https://x.com/yangyi/status/2026531581624725743
+   摘要: 1Password体验其实有很多改进空间，我都订了十年了，也没感觉优化了啥，居然还通知要涨价了……💬8🔄0❤️6👀5684📊7⚡ Powered by xgo.ing
+
+121. **等我搭完企业微信客服机器人联动了Kova系统
+我准备开启一个众包创造团队
+招募5个人进入Group
+用户群沟通，AI汇总ticket，5个人共同决策需求开发，自动化完成功能开发
+
+我认为从前生产能力聚...**
+   来源: Yangyi(@Yangyixxxx) | 时间: 2026-02-25 13:30
+   链接: https://x.com/yangyi/status/2026530247915819219
+   摘要: 等我搭完企业微信客服机器人联动了Kova系统我准备开启一个众包创造团队招募5个人进入Group用户群沟通，AI汇总ticket，5个人共同决策需求开发，自动化完成功能开发我认为从前生产能力聚集在资本手里的时代已经过去了因为生产资料在这个时间窗口变得极其便宜了或许能萌生出去中心化生产协作的范式用这种方式做产品，可能更有意思💬5🔄2❤️16👀3264📊7⚡ Powered by xgo.ing
+
+122. **这条新闻很多人把焦点放在“1周”用AI做出来上面，但是也要看看为什么能一周做出来。
+
+这个项目能成功，靠的是几个条件同时到位。
+
+首先，Next.js 文档极其完善，Stack Overflow 上积...**
+   来源: 宝玉(@dotey) | 时间: 2026-02-25 13:25
+   链接: https://x.com/dotey/status/2026528869902069965
+   摘要: 这条新闻很多人把焦点放在“1周”用AI做出来上面，但是也要看看为什么能一周做出来。这个项目能成功，靠的是几个条件同时到位。首先，Next.js 文档极其完善，Stack Overflow 上积累了海量问答，这些内容早就进了大模型的训练数据，让 AI 实现一个 getServerSideProps，它不会瞎编，因为它确实被训练过。其次，Next.js 自带几千个端到端测试，团队直接搬过来当验收标准，相当于有了一份可以机器验证的&quot;规格说明书&quot;。再加上 Vite 本身已经解决了打包、热更新这些底层难题，AI 不用从零造轮子，只需要在 Vite 上面&quot;教&quot;它说 
+
+123. **这位朋友是我一位贵人
+我开了substack，写了一篇免费内容
+铁杆粉丝付了最高订阅年费
+这已经不是为了获取信息，而是一种信任认可
+如果没有任何付费，我可能会停止 会中断
+但这就成了认真写入2027年...**
+   来源: Yangyi(@Yangyixxxx) | 时间: 2026-02-25 13:23
+   链接: https://x.com/yangyi/status/2026528370654326811
+   摘要: 这位朋友是我一位贵人我开了substack，写了一篇免费内容铁杆粉丝付了最高订阅年费这已经不是为了获取信息，而是一种信任认可如果没有任何付费，我可能会停止 会中断但这就成了认真写入2027年的最佳动力💬0🔄0❤️18👀2523📊2⚡ Powered by xgo.ing
+
+124. **在盈立证券开户的兄弟多留个心眼，本想着自己养老，每月省200元在盈立定投标普500，才投了两个月，0.99美元平台使用费说要返还却没到账。今天一问客服竟说：沒有看見閣下有持有這隻股票🤣  怕了怕了**
+   来源: Geek(@geekbb) | 时间: 2026-02-25 13:05
+   链接: https://x.com/geekbb/status/2026523908984434845
+   摘要: 在盈立证券开户的兄弟多留个心眼，本想着自己养老，每月省200元在盈立定投标普500，才投了两个月，0.99美元平台使用费说要返还却没到账。今天一问客服竟说：沒有看見閣下有持有這隻股票🤣  怕了怕了💬18🔄3❤️42👀27640📊24⚡ Powered by xgo.ing
+
+125. **清华数学系大神跳槽OpenAI！曾主导SAM与Llama开发，Sora负责人：欢迎加入**
+   来源: 量子位 | 时间: 2026-02-25 13:01
+   链接: https://www.qbitai.com/2026/02/382015.html
+   摘要: 
+
+126. **What is the most manual repetitive workflow you’re experiencing with Roblox Creator Hub that we can ...**
+   来源: Peter Yang(@petergyang) | 时间: 2026-02-25 12:57
+   链接: https://x.com/petergyang/status/2026521927175877005
+   摘要: What is the most manual repetitive workflow you’re experiencing with Roblox Creator Hub that we can make better?💬0🔄0❤️11👀2049📊1⚡ Powered by xgo.ing
+
+127. **nature .md**
+   来源: Nick St. Pierre(@nickfloats) | 时间: 2026-02-25 12:55
+   链接: https://x.com/nickfloats/status/2026521333371179494
+   摘要: nature .md💬2🔄1❤️57👀3070📊7⚡ Powered by xgo.ing
+
+128. **https://t.co/hJaGyxSqnf**
+   来源: 歸藏(guizang.ai)(@op7418) | 时间: 2026-02-25 12:51
+   链接: https://x.com/op7418/status/2026520431700881816
+   摘要: x.com/i/article/2026…💬8🔄35❤️157👀33286📊71⚡ Powered by xgo.ing
+
+129. **同步的很好👍**
+   来源: 小互(@imxiaohu) | 时间: 2026-02-25 12:49
+   链接: https://x.com/xiaohu/status/2026519844305469712
+   摘要: 同步的很好👍💬0🔄0❤️0👀1670📊1⚡ Powered by xgo.ing
+
+130. **I don’t even understand what they’re saying half the time, but it doesn’t even matter**
+   来源: Justine Moore(@venturetwins) | 时间: 2026-02-25 12:48
+   链接: https://x.com/venturetwins/status/2026519711060808087
+   摘要: I don’t even understand what they’re saying half the time, but it doesn’t even matterYour browser does not support the video tag.🔗 View on Twitter💬2🔄2❤️21👀2692📊5⚡ Powered by xgo.ing
+
+131. **硅基流动 × Dify：AI Coding 活动专场上线，全面提升你的开发效率**
+   来源: Dify | 时间: 2026-02-25 12:43
+   链接: https://mp.weixin.qq.com/s?__biz=Mzg5MDkyOTY3NA==&mid=2247487914&idx=1&sn=555756a033f1521e986f1eec4d8ea84f
+   摘要: 轻松解锁更多产品福利，完成任务即可领取本期合作权益。
+
+132. **This was my number one issue with Claude Code and I’m so glad it’s here.
+
+I should do all my vibe co...**
+   来源: Peter Yang(@petergyang) | 时间: 2026-02-25 12:39
+   链接: https://x.com/petergyang/status/2026517436800053738
+   摘要: This was my number one issue with Claude Code and I’m so glad it’s here.I should do all my vibe coding on my Mac mini now.Claude@claudeaiNew in Claude Code: Remote Control.Kick off a task in your terminal and pick it up from your phone while you take a walk or join a meeting. Claude keeps running on
+
+133. **Build yours — free 👉 https://t.co/uQW0btTsQ4**
+   来源: Genspark(@genspark_ai) | 时间: 2026-02-25 12:35
+   链接: https://x.com/genspark_ai/status/2026516328660844885
+   摘要: Build yours — free 👉genspark.ai/ai_inbox4💬0🔄1❤️1👀839📊1⚡ Powered by xgo.ing
+
+134. **You set the rules. AI does the work.
+
+Build your own workflow in Genspark AI Inbox and let AI triage...**
+   来源: Genspark(@genspark_ai) | 时间: 2026-02-25 12:35
+   链接: https://x.com/genspark_ai/status/2026516326374842790
+   摘要: You set the rules. AI does the work.Build your own workflow in Genspark AI Inbox and let AI triage your emails for you.Your browser does not support the video tag.🔗 View on Twitter💬4🔄4❤️48👀7148📊14⚡ Powered by xgo.ing
+
+135. **过了个年，AI 圈变天了？但没人告诉你为什么**
+   来源: 歸藏的AI工具箱 | 时间: 2026-02-25 12:26
+   链接: https://mp.weixin.qq.com/s?__biz=MzU0MDk3NTUxMA==&mid=2247495944&idx=1&sn=42b27b17384c95554d32e550852b5699
+   摘要: 最近看了很多文章。都在说我们已经迈过了奇点，Agent 时代来了。
+但他们都在告诉你"变化已经发生"，但没有人把"变化具体是什么"讲的特别清楚。
+
+136. **人类有三种傻乎乎行为：
+
+1. 证明自己当下是对的。
+2. 证明自己过去是对的。
+3. 证明别人是错的。
+
+傻乎乎没错。
+挺可爱。但没啥用。**
+   来源: Frank Wang 玉伯(@lifesinger) | 时间: 2026-02-25 12:25
+   链接: https://x.com/lifesinger/status/2026513945519911293
+   摘要: 人类有三种傻乎乎行为：1. 证明自己当下是对的。2. 证明自己过去是对的。3. 证明别人是错的。傻乎乎没错。挺可爱。但没啥用。💬11🔄2❤️35👀3264📊16⚡ Powered by xgo.ing
+
+137. **Stripe is the best at supporting innovation within AI startups. We are honored to be partnering with...**
+   来源: hidecloud(@hidecloud) | 时间: 2026-02-25 12:22
+   链接: https://x.com/hidecloud/status/2026512985821519967
+   摘要: Stripe is the best at supporting innovation within AI startups. We are honored to be partnering with Stripe.John Collison@collisionThe internet economy is speeding up! We just released our annual letter, detailing everything we're seeing with startup formation, agentic commerce, stablecoins, and lot
+
+138. **最强Coding Plan上线！阿里云上线Qwen3.5、GLM-5、MiniMax M2.5、Kimi K2.5四大顶尖开源模型**
+   来源: 量子位 | 时间: 2026-02-25 12:21
+   链接: https://www.qbitai.com/2026/02/382010.html
+   摘要: 新用户首月仅需39.9元
+
+139. **推荐高密度信息大图提示词
+作者 @WaytoAGI 
+
+链接：https://t.co/800kkBim5c**
+   来源: 宝玉(@dotey) | 时间: 2026-02-25 12:20
+   链接: https://x.com/dotey/status/2026512661979046000
+   摘要: 推荐高密度信息大图提示词作者 @WaytoAGI 链接：waytoagi.feishu.cn/wiki/YG0zwalij…💬26🔄54❤️243👀26197📊112⚡ Powered by xgo.ing
+
+140. **In practice, this will be the rate limit on the impact AI will have in the economy / society**
+   来源: Logan Kilpatrick(@OfficialLoganK) | 时间: 2026-02-25 12:12
+   链接: https://x.com/OfficialLoganK/status/2026510612449079569
+   摘要: In practice, this will be the rate limit on the impact AI will have in the economy / society💬13🔄5❤️228👀22445📊33⚡ Powered by xgo.ing
+
+141. **The compute bottleneck is massively under appreciated. 
+
+I would guess the gap between supply and de...**
+   来源: Logan Kilpatrick(@OfficialLoganK) | 时间: 2026-02-25 12:12
+   链接: https://x.com/OfficialLoganK/status/2026510487022625040
+   摘要: The compute bottleneck is massively under appreciated. I would guess the gap between supply and demand is growing single digit % every day.💬99🔄58❤️1020👀121491📊212⚡ Powered by xgo.ing
+
+142. **We finally built the magical AI video machine, and we’re using it to…recreate everything, but with c...**
+   来源: Justine Moore(@venturetwins) | 时间: 2026-02-25 12:11
+   链接: https://x.com/venturetwins/status/2026510438171832750
+   摘要: We finally built the magical AI video machine, and we’re using it to…recreate everything, but with catsYour browser does not support the video tag.🔗 View on Twitter💬18🔄3❤️115👀8294📊30⚡ Powered by xgo.ing
+
+143. **从单一工具到「数字中枢」，写给普通人的 OpenClaw 使用指南**
+   来源: 少数派 | 时间: 2026-02-25 12:11
+   链接: https://mp.weixin.qq.com/s?__biz=MzU4Mjg3MDAyMQ==&mid=2247607529&idx=1&sn=25cf0eb568c421039326fb5620232955
+   摘要: OpenClaw：高强度使用两周，这个 AI 工具颠覆了我的工作流
+
+144. **一派讨论精选 | 分享你镜头里的归途**
+   来源: 少数派 | 时间: 2026-02-25 12:11
+   链接: https://mp.weixin.qq.com/s?__biz=MzU4Mjg3MDAyMQ==&mid=2247607529&idx=2&sn=373f8fe3e88f63efe8c25d65025e03af
+   摘要: 在上期第 263 期一派讨论《又是一年：来分享你镜头里的归途》中，共有 80 名派友热情参与，十分感谢！
+
+145. **除了代码和客服，AI agent下一个爆发的场景会在哪？**
+   来源: 深思圈 | 时间: 2026-02-25 12:05
+   链接: https://mp.weixin.qq.com/s?__biz=Mzg3NDc2MjQxMg==&mid=2247493694&idx=1&sn=a7be9a1ea472c67e7132fe22a57535c3
+   摘要: AI agent 在编程领域占50%，销售和金融却不到5%？这不是技术问题，而是数据基础设施还没就位。SaaStr 创始人 Jason 分享了他们的 AI agent Monaco 首日自主完成10万美元交易的案例。基础设施正在快速建设，现
+
+146. **3倍吞吐量、访存减至1/10！蚂蚁甩出两大万亿参数开源模型，背后架构成关键**
+   来源: 智东西 | 时间: 2026-02-25 12:04
+   链接: https://mp.weixin.qq.com/s?__biz=MzA4MTQ4NjQzMw==&mid=2652797346&idx=1&sn=d7f7e7af2d83ce29316848e1527b9d7e
+   摘要: 回归架构进化的本质。
+
+147. **给扫地机器人装上「眼睛」：寻找家庭场景里的 FSD 时刻**
+   来源: 极客公园 | 时间: 2026-02-25 12:03
+   链接: https://mp.weixin.qq.com/s?__biz=MTMwNDMwODQ0MQ==&mid=2653099884&idx=1&sn=db4960abdf564a85bef372f455144a63
+   摘要: ​具身智能赛道的「第一颗钉子」，就长在你家里。
+
+148. **Paper 桌面版终于发布了，还有 MCP 支持和 AI agents 直接对话生成设计。
+
+加油，干死 Figma！**
+   来源: Ding(@dingyi) | 时间: 2026-02-25 11:53
+   链接: https://x.com/dingyi/status/2026505748469944563
+   摘要: Paper 桌面版终于发布了，还有 MCP 支持和 AI agents 直接对话生成设计。加油，干死 Figma！Your browser does not support the video tag.🔗 View on Twitter💬15🔄19❤️183👀24589📊61⚡ Powered by xgo.ing
+
+149. **中美AI之间的蒸馏，要撕破了 |【经纬低调分享】**
+   来源: 经纬创投 | 时间: 2026-02-25 11:45
+   链接: https://mp.weixin.qq.com/s?__biz=MzA3ODk5OTEzOA==&mid=2962186810&idx=1&sn=07ba82b192090c90a4885141749416f5
+   摘要: 
+
+150. **Cloudflare 最近搞了个叫 vinext 的框架，用 Vite 的引擎来跑 Next.js 的代码，这兄弟搭了一个最简单的测试网站，部署在 Cloudflare Workers 上，顺手加了性...**
+   来源: Geek(@geekbb) | 时间: 2026-02-25 11:44
+   链接: https://x.com/geekbb/status/2026503484019978620
+   摘要: Cloudflare 最近搞了个叫 vinext 的框架，用 Vite 的引擎来跑 Next.js 的代码，这兄弟搭了一个最简单的测试网站，部署在 Cloudflare Workers 上，顺手加了性能测试功能，可以实时显示网页加载速度和传输大小，想看看到底能有多快。他亲自验证了下，官方没吹牛逼：同样一个基础页面，原生 Next.js 打包出来 165.2 KB，vinext 只有 71.6 KB。小了57%。用户打开更快，流量也省了一半。他还在页面底部放了个对比表，把自己写的单页面跟官方博客的 33 页中型应用数据放一起比。最右边那列写着 Verdict（判决结果）github.com/h1
+
+
+---
+
+**任务要求**:
+
+1. **识别核心主题**（4-6 个），如：大模型发布、AI 应用、开源项目、行业动态、技术突破、政策监管等
+2. **每个主题下选出 3-5 篇最重要的文章**，提供：
+   - 标题（保留原标题）
+   - 原文链接（必须使用上面提供的真实链接）
+   - 一句话总结（20-40 字，提炼核心信息）
+3. **生成「今日要点」**（3-5 条，每条 1 句话概括最重要的信息）
+4. **输出格式**严格遵循以下模板
+
+---
+
+**输出模板**:
+
+```markdown
+# 📰 RSS 日报 · 2026-02-24
+
+**时间范围**: 2026-02-24 00:00 - 2026-02-25 22:36
+**文章总数**: 1000 篇
+**来源数量**: 263 个
+
+---
+
+## 🔥 [主题 1 名称，如：大模型发布]
+
+### 1. [文章标题]
+🔗 [原文链接]
+📝 [一句话总结，20-40字]
+
+### 2. [文章标题]
+🔗 [原文链接]
+📝 [一句话总结]
+
+---
+
+## 🔬 [主题 2 名称，如：技术突破]
+
+### 1. [文章标题]
+🔗 [原文链接]
+📝 [一句话总结]
+
+---
+
+## 💡 [主题 3 名称]
+
+...
+
+---
+
+## 🎯 今日要点
+
+1. [最重要的信息，1 句话，30-50字]
+2. [第二重要，1 句话]
+3. [第三重要，1 句话]
+4. [值得关注的趋势，1 句话]
+
+---
+
+## 📊 来源统计 Top 15
+
+| 来源 | 文章数 |
+|------|--------|
+| lmarena.ai(@lmarena_ai) | 27 |
+| Yangyi(@Yangyixxxx) | 20 |
+| 宝玉(@dotey) | 20 |
+| Geek(@geekbb) | 19 |
+| OpenAI Developers(@OpenAIDevs) | 19 |
+| Berryxia.AI(@berryxia) | 17 |
+| 傅盛(@FuSheng_0306) | 15 |
+| Ado(@adocomplete) | 15 |
+| Y Combinator(@ycombinator) | 15 |
+| 爱范儿 | 14 |
+| 向阳乔木(@vista8) | 13 |
+| Akshay Kothari(@akothari) | 13 |
+| The Rundown AI(@TheRundownAI) | 12 |
+| meng shao(@shao__meng) | 12 |
+| Peter Yang(@petergyang) | 12 |
+
+---
+*生成时间: 2026-02-25 22:36:18*
+```
+
+**注意事项**:
+- 不要臆造内容，所有信息必须来自上述文章列表
+- 链接必须使用原文链接，不得修改或伪造
+- 主题分类要合理，避免过于分散或重叠
+- 如果某个主题文章不足 3 篇，可以只列出实际数量
+- 一句话总结要精炼，突出核心价值，不要只是重复标题
+- 今日要点要提炼最有价值的信息，不是简单罗列
