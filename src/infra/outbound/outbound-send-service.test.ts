@@ -4,30 +4,24 @@ const mocks = vi.hoisted(() => ({
   dispatchChannelMessageAction: vi.fn(),
   sendMessage: vi.fn(),
   sendPoll: vi.fn(),
-  getAgentScopedMediaLocalRoots: vi.fn(() => ["/tmp/agent-roots"]),
 }));
 
 vi.mock("../../channels/plugins/message-actions.js", () => ({
-  dispatchChannelMessageAction: mocks.dispatchChannelMessageAction,
+  dispatchChannelMessageAction: (...args: unknown[]) => mocks.dispatchChannelMessageAction(...args),
 }));
 
 vi.mock("./message.js", () => ({
-  sendMessage: mocks.sendMessage,
-  sendPoll: mocks.sendPoll,
-}));
-
-vi.mock("../../media/local-roots.js", () => ({
-  getAgentScopedMediaLocalRoots: mocks.getAgentScopedMediaLocalRoots,
+  sendMessage: (...args: unknown[]) => mocks.sendMessage(...args),
+  sendPoll: (...args: unknown[]) => mocks.sendPoll(...args),
 }));
 
 import { executePollAction, executeSendAction } from "./outbound-send-service.js";
 
 describe("executeSendAction", () => {
   beforeEach(() => {
-    mocks.dispatchChannelMessageAction.mockClear();
-    mocks.sendMessage.mockClear();
-    mocks.sendPoll.mockClear();
-    mocks.getAgentScopedMediaLocalRoots.mockClear();
+    mocks.dispatchChannelMessageAction.mockReset();
+    mocks.sendMessage.mockReset();
+    mocks.sendPoll.mockReset();
   });
 
   it("forwards ctx.agentId to sendMessage on core outbound path", async () => {
@@ -87,37 +81,6 @@ describe("executeSendAction", () => {
 
     expect(result.handledBy).toBe("plugin");
     expect(mocks.sendPoll).not.toHaveBeenCalled();
-  });
-
-  it("passes agent-scoped media local roots to plugin dispatch", async () => {
-    mocks.dispatchChannelMessageAction.mockResolvedValue({
-      ok: true,
-      value: { messageId: "msg-plugin" },
-      continuePrompt: "",
-      output: "",
-      sessionId: "s1",
-      model: "gpt-5.2",
-      usage: {},
-    });
-
-    await executeSendAction({
-      ctx: {
-        cfg: {},
-        channel: "discord",
-        params: { to: "channel:123", message: "hello" },
-        agentId: "agent-1",
-        dryRun: false,
-      },
-      to: "channel:123",
-      message: "hello",
-    });
-
-    expect(mocks.getAgentScopedMediaLocalRoots).toHaveBeenCalledWith({}, "agent-1");
-    expect(mocks.dispatchChannelMessageAction).toHaveBeenCalledWith(
-      expect.objectContaining({
-        mediaLocalRoots: ["/tmp/agent-roots"],
-      }),
-    );
   });
 
   it("forwards poll args to sendPoll on core outbound path", async () => {

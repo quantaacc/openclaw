@@ -1,36 +1,61 @@
-import { describe, expect, it } from "vitest";
-import { createSubmitHarness } from "./tui-submit-test-helpers.js";
+import { describe, expect, it, vi } from "vitest";
+import { createEditorSubmitHandler } from "./tui.js";
+
+function createSubmitHarness() {
+  const editor = {
+    setText: vi.fn(),
+    addToHistory: vi.fn(),
+  };
+  const handleCommand = vi.fn();
+  const sendMessage = vi.fn();
+  const handleBangLine = vi.fn();
+  const handler = createEditorSubmitHandler({
+    editor,
+    handleCommand,
+    sendMessage,
+    handleBangLine,
+  });
+  return { editor, handleCommand, sendMessage, handleBangLine, handler };
+}
 
 describe("createEditorSubmitHandler", () => {
   it("adds submitted messages to editor history", () => {
-    const { editor, onSubmit } = createSubmitHarness();
+    const { editor, handler } = createSubmitHarness();
 
-    onSubmit("hello world");
+    handler("hello world");
 
     expect(editor.setText).toHaveBeenCalledWith("");
     expect(editor.addToHistory).toHaveBeenCalledWith("hello world");
   });
 
   it("trims input before adding to history", () => {
-    const { editor, onSubmit } = createSubmitHarness();
+    const { editor, handler } = createSubmitHarness();
 
-    onSubmit("   hi   ");
+    handler("   hi   ");
 
     expect(editor.addToHistory).toHaveBeenCalledWith("hi");
   });
 
-  it.each(["", "   "])("does not add blank submissions to history", (text) => {
-    const { editor, onSubmit } = createSubmitHarness();
+  it("does not add empty-string submissions to history", () => {
+    const { editor, handler } = createSubmitHarness();
 
-    onSubmit(text);
+    handler("");
+
+    expect(editor.addToHistory).not.toHaveBeenCalled();
+  });
+
+  it("does not add whitespace-only submissions to history", () => {
+    const { editor, handler } = createSubmitHarness();
+
+    handler("   ");
 
     expect(editor.addToHistory).not.toHaveBeenCalled();
   });
 
   it("routes slash commands to handleCommand", () => {
-    const { editor, handleCommand, sendMessage, onSubmit } = createSubmitHarness();
+    const { editor, handleCommand, sendMessage, handler } = createSubmitHarness();
 
-    onSubmit("/models");
+    handler("/models");
 
     expect(editor.addToHistory).toHaveBeenCalledWith("/models");
     expect(handleCommand).toHaveBeenCalledWith("/models");
@@ -38,9 +63,9 @@ describe("createEditorSubmitHandler", () => {
   });
 
   it("routes normal messages to sendMessage", () => {
-    const { editor, handleCommand, sendMessage, onSubmit } = createSubmitHarness();
+    const { editor, handleCommand, sendMessage, handler } = createSubmitHarness();
 
-    onSubmit("hello");
+    handler("hello");
 
     expect(editor.addToHistory).toHaveBeenCalledWith("hello");
     expect(sendMessage).toHaveBeenCalledWith("hello");
@@ -48,10 +73,18 @@ describe("createEditorSubmitHandler", () => {
   });
 
   it("routes bang-prefixed lines to handleBangLine", () => {
-    const { handleBangLine, onSubmit } = createSubmitHarness();
+    const { handleBangLine, handler } = createSubmitHarness();
 
-    onSubmit("!ls");
+    handler("!ls");
 
     expect(handleBangLine).toHaveBeenCalledWith("!ls");
+  });
+
+  it("treats a lone ! as a normal message", () => {
+    const { sendMessage, handler } = createSubmitHarness();
+
+    handler("!");
+
+    expect(sendMessage).toHaveBeenCalledWith("!");
   });
 });

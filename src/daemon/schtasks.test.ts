@@ -5,15 +5,29 @@ import { describe, expect, it } from "vitest";
 import { parseSchtasksQuery, readScheduledTaskCommand, resolveTaskScriptPath } from "./schtasks.js";
 
 describe("schtasks runtime parsing", () => {
-  it.each(["Ready", "Running"])("parses %s status", (status) => {
+  it("parses status and last run info", () => {
     const output = [
       "TaskName: \\OpenClaw Gateway",
-      `Status: ${status}`,
+      "Status: Ready",
       "Last Run Time: 1/8/2026 1:23:45 AM",
       "Last Run Result: 0x0",
     ].join("\r\n");
     expect(parseSchtasksQuery(output)).toEqual({
-      status,
+      status: "Ready",
+      lastRunTime: "1/8/2026 1:23:45 AM",
+      lastRunResult: "0x0",
+    });
+  });
+
+  it("parses running status", () => {
+    const output = [
+      "TaskName: \\OpenClaw Gateway",
+      "Status: Running",
+      "Last Run Time: 1/8/2026 1:23:45 AM",
+      "Last Run Result: 0x0",
+    ].join("\r\n");
+    expect(parseSchtasksQuery(output)).toEqual({
+      status: "Running",
       lastRunTime: "1/8/2026 1:23:45 AM",
       lastRunResult: "0x0",
     });
@@ -21,33 +35,32 @@ describe("schtasks runtime parsing", () => {
 });
 
 describe("resolveTaskScriptPath", () => {
-  it.each([
-    {
-      name: "uses default path when OPENCLAW_PROFILE is unset",
-      env: { USERPROFILE: "C:\\Users\\test" },
-      expected: path.join("C:\\Users\\test", ".openclaw", "gateway.cmd"),
-    },
-    {
-      name: "uses profile-specific path when OPENCLAW_PROFILE is set to a custom value",
-      env: { USERPROFILE: "C:\\Users\\test", OPENCLAW_PROFILE: "jbphoenix" },
-      expected: path.join("C:\\Users\\test", ".openclaw-jbphoenix", "gateway.cmd"),
-    },
-    {
-      name: "prefers OPENCLAW_STATE_DIR over profile-derived defaults",
-      env: {
-        USERPROFILE: "C:\\Users\\test",
-        OPENCLAW_PROFILE: "rescue",
-        OPENCLAW_STATE_DIR: "C:\\State\\openclaw",
-      },
-      expected: path.join("C:\\State\\openclaw", "gateway.cmd"),
-    },
-    {
-      name: "falls back to HOME when USERPROFILE is not set",
-      env: { HOME: "/home/test", OPENCLAW_PROFILE: "default" },
-      expected: path.join("/home/test", ".openclaw", "gateway.cmd"),
-    },
-  ])("$name", ({ env, expected }) => {
-    expect(resolveTaskScriptPath(env)).toBe(expected);
+  it("uses default path when OPENCLAW_PROFILE is unset", () => {
+    const env = { USERPROFILE: "C:\\Users\\test" };
+    expect(resolveTaskScriptPath(env)).toBe(
+      path.join("C:\\Users\\test", ".openclaw", "gateway.cmd"),
+    );
+  });
+
+  it("uses profile-specific path when OPENCLAW_PROFILE is set to a custom value", () => {
+    const env = { USERPROFILE: "C:\\Users\\test", OPENCLAW_PROFILE: "jbphoenix" };
+    expect(resolveTaskScriptPath(env)).toBe(
+      path.join("C:\\Users\\test", ".openclaw-jbphoenix", "gateway.cmd"),
+    );
+  });
+
+  it("prefers OPENCLAW_STATE_DIR over profile-derived defaults", () => {
+    const env = {
+      USERPROFILE: "C:\\Users\\test",
+      OPENCLAW_PROFILE: "rescue",
+      OPENCLAW_STATE_DIR: "C:\\State\\openclaw",
+    };
+    expect(resolveTaskScriptPath(env)).toBe(path.join("C:\\State\\openclaw", "gateway.cmd"));
+  });
+
+  it("falls back to HOME when USERPROFILE is not set", () => {
+    const env = { HOME: "/home/test", OPENCLAW_PROFILE: "default" };
+    expect(resolveTaskScriptPath(env)).toBe(path.join("/home/test", ".openclaw", "gateway.cmd"));
   });
 });
 
@@ -194,34 +207,6 @@ describe("readScheduledTaskCommand", () => {
         const result = await readScheduledTaskCommand(env);
         expect(result).toEqual({
           programArguments: ["node", "gateway.js", "--from-state-dir"],
-        });
-      },
-    );
-  });
-
-  it("parses quoted set assignments with escaped metacharacters", async () => {
-    await withScheduledTaskScript(
-      {
-        scriptLines: [
-          "@echo off",
-          'set "OC_AMP=left & right"',
-          'set "OC_PIPE=a | b"',
-          'set "OC_CARET=^^"',
-          'set "OC_PERCENT=%%TEMP%%"',
-          'set "OC_BANG=^!token^!"',
-          'set "OC_QUOTE=he said ^"hi^""',
-          "node gateway.js --verbose",
-        ],
-      },
-      async (env) => {
-        const result = await readScheduledTaskCommand(env);
-        expect(result?.environment).toEqual({
-          OC_AMP: "left & right",
-          OC_PIPE: "a | b",
-          OC_CARET: "^",
-          OC_PERCENT: "%TEMP%",
-          OC_BANG: "!token!",
-          OC_QUOTE: 'he said "hi"',
         });
       },
     );

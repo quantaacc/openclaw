@@ -18,8 +18,6 @@ import {
   resolveIMessageAccount,
   resolveIMessageGroupRequireMention,
   resolveIMessageGroupToolPolicy,
-  resolveAllowlistProviderRuntimeGroupPolicy,
-  resolveDefaultGroupPolicy,
   setAccountEnabledInConfigSection,
   type ChannelPlugin,
   type ResolvedIMessageAccount,
@@ -80,8 +78,6 @@ export const imessagePlugin: ChannelPlugin<ResolvedIMessageAccount> = {
       ),
     formatAllowFrom: ({ allowFrom }) =>
       allowFrom.map((entry) => String(entry).trim()).filter(Boolean),
-    resolveDefaultTo: ({ cfg, accountId }) =>
-      resolveIMessageAccount({ cfg, accountId }).config.defaultTo?.trim() || undefined,
   },
   security: {
     resolveDmPolicy: ({ cfg, accountId, account }) => {
@@ -99,12 +95,8 @@ export const imessagePlugin: ChannelPlugin<ResolvedIMessageAccount> = {
       };
     },
     collectWarnings: ({ account, cfg }) => {
-      const defaultGroupPolicy = resolveDefaultGroupPolicy(cfg);
-      const { groupPolicy } = resolveAllowlistProviderRuntimeGroupPolicy({
-        providerConfigPresent: cfg.channels?.imessage !== undefined,
-        groupPolicy: account.config.groupPolicy,
-        defaultGroupPolicy,
-      });
+      const defaultGroupPolicy = cfg.channels?.defaults?.groupPolicy;
+      const groupPolicy = account.config.groupPolicy ?? defaultGroupPolicy ?? "allowlist";
       if (groupPolicy !== "open") {
         return [];
       }

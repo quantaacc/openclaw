@@ -119,8 +119,6 @@ Example `package.json`:
 
 Each entry points to a hook directory containing `HOOK.md` and `handler.ts` (or `index.ts`).
 Hook packs can ship dependencies; they will be installed under `~/.openclaw/hooks/<id>`.
-Each `openclaw.hooks` entry must stay inside the package directory after symlink
-resolution; entries that escape are rejected.
 
 Security note: `openclaw hooks install` installs dependencies with `npm install --ignore-scripts`
 (no lifecycle scripts). Keep hook pack dependency trees "pure JS/TS" and avoid packages that rely
@@ -182,7 +180,9 @@ The `metadata.openclaw` object supports:
 The `handler.ts` file exports a `HookHandler` function:
 
 ```typescript
-const myHandler = async (event) => {
+import type { HookHandler } from "../../src/hooks/hooks.js";
+
+const myHandler: HookHandler = async (event) => {
   // Only trigger on 'new' command
   if (event.type !== "command" || event.action !== "new") {
     return;
@@ -303,15 +303,13 @@ Message events include rich context about the message:
 #### Example: Message Logger Hook
 
 ```typescript
-const isMessageReceivedEvent = (event: { type: string; action: string }) =>
-  event.type === "message" && event.action === "received";
-const isMessageSentEvent = (event: { type: string; action: string }) =>
-  event.type === "message" && event.action === "sent";
+import type { HookHandler } from "../../src/hooks/hooks.js";
+import { isMessageReceivedEvent, isMessageSentEvent } from "../../src/hooks/internal-hooks.js";
 
-const handler = async (event) => {
-  if (isMessageReceivedEvent(event as { type: string; action: string })) {
+const handler: HookHandler = async (event) => {
+  if (isMessageReceivedEvent(event)) {
     console.log(`[message-logger] Received from ${event.context.from}: ${event.context.content}`);
-  } else if (isMessageSentEvent(event as { type: string; action: string })) {
+  } else if (isMessageSentEvent(event)) {
     console.log(`[message-logger] Sent to ${event.context.to}: ${event.context.content}`);
   }
 };
@@ -364,7 +362,9 @@ This hook does something useful when you issue `/new`.
 ### 4. Create handler.ts
 
 ```typescript
-const handler = async (event) => {
+import type { HookHandler } from "../../src/hooks/hooks.js";
+
+const handler: HookHandler = async (event) => {
   if (event.type !== "command" || event.action !== "new") {
     return;
   }
@@ -791,17 +791,13 @@ Test your handlers in isolation:
 
 ```typescript
 import { test } from "vitest";
+import { createHookEvent } from "./src/hooks/hooks.js";
 import myHandler from "./hooks/my-hook/handler.js";
 
 test("my handler works", async () => {
-  const event = {
-    type: "command",
-    action: "new",
-    sessionKey: "test-session",
-    timestamp: new Date(),
-    messages: [],
-    context: { foo: "bar" },
-  };
+  const event = createHookEvent("command", "new", "test-session", {
+    foo: "bar",
+  });
 
   await myHandler(event);
 

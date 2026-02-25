@@ -18,7 +18,7 @@ import {
 
 describe("systemd availability", () => {
   beforeEach(() => {
-    execFileMock.mockClear();
+    execFileMock.mockReset();
   });
 
   it("returns true when systemctl --user succeeds", async () => {
@@ -61,44 +61,49 @@ describe("systemd runtime parsing", () => {
 });
 
 describe("resolveSystemdUserUnitPath", () => {
-  it.each([
-    {
-      name: "uses default service name when OPENCLAW_PROFILE is unset",
-      env: { HOME: "/home/test" },
-      expected: "/home/test/.config/systemd/user/openclaw-gateway.service",
-    },
-    {
-      name: "uses profile-specific service name when OPENCLAW_PROFILE is set to a custom value",
-      env: { HOME: "/home/test", OPENCLAW_PROFILE: "jbphoenix" },
-      expected: "/home/test/.config/systemd/user/openclaw-gateway-jbphoenix.service",
-    },
-    {
-      name: "prefers OPENCLAW_SYSTEMD_UNIT over OPENCLAW_PROFILE",
-      env: {
-        HOME: "/home/test",
-        OPENCLAW_PROFILE: "jbphoenix",
-        OPENCLAW_SYSTEMD_UNIT: "custom-unit",
-      },
-      expected: "/home/test/.config/systemd/user/custom-unit.service",
-    },
-    {
-      name: "handles OPENCLAW_SYSTEMD_UNIT with .service suffix",
-      env: {
-        HOME: "/home/test",
-        OPENCLAW_SYSTEMD_UNIT: "custom-unit.service",
-      },
-      expected: "/home/test/.config/systemd/user/custom-unit.service",
-    },
-    {
-      name: "trims whitespace from OPENCLAW_SYSTEMD_UNIT",
-      env: {
-        HOME: "/home/test",
-        OPENCLAW_SYSTEMD_UNIT: "  custom-unit  ",
-      },
-      expected: "/home/test/.config/systemd/user/custom-unit.service",
-    },
-  ])("$name", ({ env, expected }) => {
-    expect(resolveSystemdUserUnitPath(env)).toBe(expected);
+  it("uses default service name when OPENCLAW_PROFILE is unset", () => {
+    const env = { HOME: "/home/test" };
+    expect(resolveSystemdUserUnitPath(env)).toBe(
+      "/home/test/.config/systemd/user/openclaw-gateway.service",
+    );
+  });
+
+  it("uses profile-specific service name when OPENCLAW_PROFILE is set to a custom value", () => {
+    const env = { HOME: "/home/test", OPENCLAW_PROFILE: "jbphoenix" };
+    expect(resolveSystemdUserUnitPath(env)).toBe(
+      "/home/test/.config/systemd/user/openclaw-gateway-jbphoenix.service",
+    );
+  });
+
+  it("prefers OPENCLAW_SYSTEMD_UNIT over OPENCLAW_PROFILE", () => {
+    const env = {
+      HOME: "/home/test",
+      OPENCLAW_PROFILE: "jbphoenix",
+      OPENCLAW_SYSTEMD_UNIT: "custom-unit",
+    };
+    expect(resolveSystemdUserUnitPath(env)).toBe(
+      "/home/test/.config/systemd/user/custom-unit.service",
+    );
+  });
+
+  it("handles OPENCLAW_SYSTEMD_UNIT with .service suffix", () => {
+    const env = {
+      HOME: "/home/test",
+      OPENCLAW_SYSTEMD_UNIT: "custom-unit.service",
+    };
+    expect(resolveSystemdUserUnitPath(env)).toBe(
+      "/home/test/.config/systemd/user/custom-unit.service",
+    );
+  });
+
+  it("trims whitespace from OPENCLAW_SYSTEMD_UNIT", () => {
+    const env = {
+      HOME: "/home/test",
+      OPENCLAW_SYSTEMD_UNIT: "  custom-unit  ",
+    };
+    expect(resolveSystemdUserUnitPath(env)).toBe(
+      "/home/test/.config/systemd/user/custom-unit.service",
+    );
   });
 });
 
@@ -151,7 +156,7 @@ describe("parseSystemdExecStart", () => {
 
 describe("systemd service control", () => {
   beforeEach(() => {
-    execFileMock.mockClear();
+    execFileMock.mockReset();
   });
 
   it("stops the resolved user unit", async () => {

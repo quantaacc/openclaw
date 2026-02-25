@@ -10,12 +10,9 @@ import android.provider.Settings
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.foundation.background
-import androidx.compose.foundation.border
-import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -26,7 +23,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.only
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeDrawing
 import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.lazy.LazyColumn
@@ -34,19 +30,20 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ExpandLess
+import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.Icon
 import androidx.compose.material3.ListItem
-import androidx.compose.material3.ListItemDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
-import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -59,16 +56,14 @@ import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalFocusManager
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.input.ImeAction
-import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.sp
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.core.content.ContextCompat
 import ai.openclaw.android.BuildConfig
 import ai.openclaw.android.LocationMode
 import ai.openclaw.android.MainViewModel
+import ai.openclaw.android.NodeForegroundService
 import ai.openclaw.android.VoiceWakeMode
 import ai.openclaw.android.WakeWords
 
@@ -85,10 +80,22 @@ fun SettingsSheet(viewModel: MainViewModel) {
   val voiceWakeMode by viewModel.voiceWakeMode.collectAsState()
   val voiceWakeStatusText by viewModel.voiceWakeStatusText.collectAsState()
   val isConnected by viewModel.isConnected.collectAsState()
+  val manualEnabled by viewModel.manualEnabled.collectAsState()
+  val manualHost by viewModel.manualHost.collectAsState()
+  val manualPort by viewModel.manualPort.collectAsState()
+  val manualTls by viewModel.manualTls.collectAsState()
+  val gatewayToken by viewModel.gatewayToken.collectAsState()
   val canvasDebugStatusEnabled by viewModel.canvasDebugStatusEnabled.collectAsState()
+  val statusText by viewModel.statusText.collectAsState()
+  val serverName by viewModel.serverName.collectAsState()
+  val remoteAddress by viewModel.remoteAddress.collectAsState()
+  val gateways by viewModel.gateways.collectAsState()
+  val discoveryStatusText by viewModel.discoveryStatusText.collectAsState()
+  val pendingTrust by viewModel.pendingGatewayTrust.collectAsState()
 
   val listState = rememberLazyListState()
   val (wakeWordsText, setWakeWordsText) = remember { mutableStateOf("") }
+  val (advancedExpanded, setAdvancedExpanded) = remember { mutableStateOf(false) }
   val focusManager = LocalFocusManager.current
   var wakeWordsHadFocus by remember { mutableStateOf(false) }
   val deviceModel =
@@ -107,14 +114,31 @@ fun SettingsSheet(viewModel: MainViewModel) {
         versionName
       }
     }
-  val listItemColors =
-    ListItemDefaults.colors(
-      containerColor = Color.Transparent,
-      headlineColor = mobileText,
-      supportingColor = mobileTextSecondary,
-      trailingIconColor = mobileTextSecondary,
-      leadingIconColor = mobileTextSecondary,
+
+  if (pendingTrust != null) {
+    val prompt = pendingTrust!!
+    AlertDialog(
+      onDismissRequest = { viewModel.declineGatewayTrustPrompt() },
+      title = { Text("Trust this gateway?") },
+      text = {
+        Text(
+          "First-time TLS connection.\n\n" +
+            "Verify this SHA-256 fingerprint out-of-band before trusting:\n" +
+            prompt.fingerprintSha256,
+        )
+      },
+      confirmButton = {
+        TextButton(onClick = { viewModel.acceptGatewayTrustPrompt() }) {
+          Text("Trust and connect")
+        }
+      },
+      dismissButton = {
+        TextButton(onClick = { viewModel.declineGatewayTrustPrompt() }) {
+          Text("Cancel")
+        }
+      },
     )
+  }
 
   LaunchedEffect(wakeWords) { setWakeWordsText(wakeWords.joinToString(", ")) }
   val commitWakeWords = {
@@ -244,79 +268,209 @@ fun SettingsSheet(viewModel: MainViewModel) {
     }
   }
 
-  Box(
+  val visibleGateways =
+    if (isConnected && remoteAddress != null) {
+      gateways.filterNot { "${it.host}:${it.port}" == remoteAddress }
+    } else {
+      gateways
+    }
+
+  val gatewayDiscoveryFooterText =
+    if (visibleGateways.isEmpty()) {
+      discoveryStatusText
+    } else if (isConnected) {
+      "Discovery active • ${visibleGateways.size} other gateway${if (visibleGateways.size == 1) "" else "s"} found"
+    } else {
+      "Discovery active • ${visibleGateways.size} gateway${if (visibleGateways.size == 1) "" else "s"} found"
+    }
+
+  LazyColumn(
+    state = listState,
     modifier =
       Modifier
-        .fillMaxSize()
-        .background(mobileBackgroundGradient),
+        .fillMaxWidth()
+        .fillMaxHeight()
+        .imePadding()
+        .windowInsetsPadding(WindowInsets.safeDrawing.only(WindowInsetsSides.Bottom)),
+    contentPadding = PaddingValues(16.dp),
+    verticalArrangement = Arrangement.spacedBy(6.dp),
   ) {
-    LazyColumn(
-      state = listState,
-      modifier =
-        Modifier
-          .fillMaxWidth()
-          .fillMaxHeight()
-          .imePadding()
-          .windowInsetsPadding(WindowInsets.safeDrawing.only(WindowInsetsSides.Bottom)),
-      contentPadding = PaddingValues(horizontal = 20.dp, vertical = 16.dp),
-      verticalArrangement = Arrangement.spacedBy(8.dp),
-    ) {
-      item {
-        Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
-          Text(
-            "SETTINGS",
-            style = mobileCaption1.copy(fontWeight = FontWeight.Bold, letterSpacing = 1.sp),
-            color = mobileAccent,
-          )
-          Text("Device Configuration", style = mobileTitle2, color = mobileText)
-          Text(
-            "Manage capabilities, permissions, and diagnostics.",
-            style = mobileCallout,
-            color = mobileTextSecondary,
-          )
-        }
-      }
-      item { HorizontalDivider(color = mobileBorder) }
-
-    // Order parity: Node → Voice → Camera → Messaging → Location → Screen.
-      item {
-        Text(
-          "NODE",
-          style = mobileCaption1.copy(fontWeight = FontWeight.Bold, letterSpacing = 1.sp),
-          color = mobileAccent,
-        )
-      }
+    // Order parity: Node → Gateway → Voice → Camera → Messaging → Location → Screen.
+    item { Text("Node", style = MaterialTheme.typography.titleSmall) }
     item {
       OutlinedTextField(
         value = displayName,
         onValueChange = viewModel::setDisplayName,
-        label = { Text("Name", style = mobileCaption1, color = mobileTextSecondary) },
+        label = { Text("Name") },
         modifier = Modifier.fillMaxWidth(),
-        textStyle = mobileBody.copy(color = mobileText),
-        colors = settingsTextFieldColors(),
       )
     }
-      item { Text("Instance ID: $instanceId", style = mobileCallout.copy(fontFamily = FontFamily.Monospace), color = mobileTextSecondary) }
-      item { Text("Device: $deviceModel", style = mobileCallout, color = mobileTextSecondary) }
-      item { Text("Version: $appVersion", style = mobileCallout, color = mobileTextSecondary) }
+    item { Text("Instance ID: $instanceId", color = MaterialTheme.colorScheme.onSurfaceVariant) }
+    item { Text("Device: $deviceModel", color = MaterialTheme.colorScheme.onSurfaceVariant) }
+    item { Text("Version: $appVersion", color = MaterialTheme.colorScheme.onSurfaceVariant) }
 
-      item { HorizontalDivider(color = mobileBorder) }
+    item { HorizontalDivider() }
 
-    // Voice
+    // Gateway
+    item { Text("Gateway", style = MaterialTheme.typography.titleSmall) }
+    item { ListItem(headlineContent = { Text("Status") }, supportingContent = { Text(statusText) }) }
+    if (serverName != null) {
+      item { ListItem(headlineContent = { Text("Server") }, supportingContent = { Text(serverName!!) }) }
+    }
+    if (remoteAddress != null) {
+      item { ListItem(headlineContent = { Text("Address") }, supportingContent = { Text(remoteAddress!!) }) }
+    }
+    item {
+      // UI sanity: "Disconnect" only when we have an active remote.
+      if (isConnected && remoteAddress != null) {
+        Button(
+          onClick = {
+            viewModel.disconnect()
+            NodeForegroundService.stop(context)
+          },
+        ) {
+          Text("Disconnect")
+        }
+      }
+    }
+
+    item { HorizontalDivider() }
+
+    if (!isConnected || visibleGateways.isNotEmpty()) {
       item {
         Text(
-          "VOICE",
-          style = mobileCaption1.copy(fontWeight = FontWeight.Bold, letterSpacing = 1.sp),
-          color = mobileAccent,
+          if (isConnected) "Other Gateways" else "Discovered Gateways",
+          style = MaterialTheme.typography.titleSmall,
         )
       }
+      if (!isConnected && visibleGateways.isEmpty()) {
+        item { Text("No gateways found yet.", color = MaterialTheme.colorScheme.onSurfaceVariant) }
+      } else {
+        items(items = visibleGateways, key = { it.stableId }) { gateway ->
+          val detailLines =
+            buildList {
+              add("IP: ${gateway.host}:${gateway.port}")
+              gateway.lanHost?.let { add("LAN: $it") }
+              gateway.tailnetDns?.let { add("Tailnet: $it") }
+              if (gateway.gatewayPort != null || gateway.canvasPort != null) {
+                val gw = (gateway.gatewayPort ?: gateway.port).toString()
+                val canvas = gateway.canvasPort?.toString() ?: "—"
+                add("Ports: gw $gw · canvas $canvas")
+              }
+            }
+          ListItem(
+            headlineContent = { Text(gateway.name) },
+            supportingContent = {
+              Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
+                detailLines.forEach { line ->
+                  Text(line, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                }
+              }
+            },
+            trailingContent = {
+              Button(
+                onClick = {
+                  NodeForegroundService.start(context)
+                  viewModel.connect(gateway)
+                },
+              ) {
+                Text("Connect")
+              }
+            },
+          )
+        }
+      }
+      item {
+        Text(
+          gatewayDiscoveryFooterText,
+          modifier = Modifier.fillMaxWidth(),
+          textAlign = TextAlign.Center,
+          style = MaterialTheme.typography.labelMedium,
+          color = MaterialTheme.colorScheme.onSurfaceVariant,
+        )
+      }
+    }
+
+    item { HorizontalDivider() }
+
+    item {
+      ListItem(
+        headlineContent = { Text("Advanced") },
+        supportingContent = { Text("Manual gateway connection") },
+        trailingContent = {
+          Icon(
+            imageVector = if (advancedExpanded) Icons.Filled.ExpandLess else Icons.Filled.ExpandMore,
+            contentDescription = if (advancedExpanded) "Collapse" else "Expand",
+          )
+        },
+        modifier =
+          Modifier.clickable {
+            setAdvancedExpanded(!advancedExpanded)
+          },
+      )
+    }
+    item {
+      AnimatedVisibility(visible = advancedExpanded) {
+        Column(verticalArrangement = Arrangement.spacedBy(10.dp), modifier = Modifier.fillMaxWidth()) {
+          ListItem(
+            headlineContent = { Text("Use Manual Gateway") },
+            supportingContent = { Text("Use this when discovery is blocked.") },
+            trailingContent = { Switch(checked = manualEnabled, onCheckedChange = viewModel::setManualEnabled) },
+          )
+
+          OutlinedTextField(
+            value = manualHost,
+            onValueChange = viewModel::setManualHost,
+            label = { Text("Host") },
+            modifier = Modifier.fillMaxWidth(),
+            enabled = manualEnabled,
+          )
+          OutlinedTextField(
+            value = manualPort.toString(),
+            onValueChange = { v -> viewModel.setManualPort(v.toIntOrNull() ?: 0) },
+            label = { Text("Port") },
+            modifier = Modifier.fillMaxWidth(),
+            enabled = manualEnabled,
+          )
+          OutlinedTextField(
+            value = gatewayToken,
+            onValueChange = viewModel::setGatewayToken,
+            label = { Text("Gateway Token") },
+            modifier = Modifier.fillMaxWidth(),
+            enabled = manualEnabled,
+            singleLine = true,
+          )
+          ListItem(
+            headlineContent = { Text("Require TLS") },
+            supportingContent = { Text("Pin the gateway certificate on first connect.") },
+            trailingContent = { Switch(checked = manualTls, onCheckedChange = viewModel::setManualTls, enabled = manualEnabled) },
+            modifier = Modifier.alpha(if (manualEnabled) 1f else 0.5f),
+          )
+
+          val hostOk = manualHost.trim().isNotEmpty()
+          val portOk = manualPort in 1..65535
+          Button(
+            onClick = {
+              NodeForegroundService.start(context)
+              viewModel.connectManual()
+            },
+            enabled = manualEnabled && hostOk && portOk,
+          ) {
+            Text("Connect (Manual)")
+          }
+        }
+      }
+    }
+
+    item { HorizontalDivider() }
+
+    // Voice
+    item { Text("Voice", style = MaterialTheme.typography.titleSmall) }
     item {
       val enabled = voiceWakeMode != VoiceWakeMode.Off
       ListItem(
-        modifier = settingsRowModifier(),
-        colors = listItemColors,
-        headlineContent = { Text("Voice Wake", style = mobileHeadline) },
-        supportingContent = { Text(voiceWakeStatusText, style = mobileCallout) },
+        headlineContent = { Text("Voice Wake") },
+        supportingContent = { Text(voiceWakeStatusText) },
         trailingContent = {
           Switch(
             checked = enabled,
@@ -339,10 +493,8 @@ fun SettingsSheet(viewModel: MainViewModel) {
       AnimatedVisibility(visible = voiceWakeMode != VoiceWakeMode.Off) {
         Column(verticalArrangement = Arrangement.spacedBy(6.dp), modifier = Modifier.fillMaxWidth()) {
           ListItem(
-            modifier = settingsRowModifier(),
-            colors = listItemColors,
-            headlineContent = { Text("Foreground Only", style = mobileHeadline) },
-            supportingContent = { Text("Listens only while OpenClaw is open.", style = mobileCallout) },
+            headlineContent = { Text("Foreground Only") },
+            supportingContent = { Text("Listens only while OpenClaw is open.") },
             trailingContent = {
               RadioButton(
                 selected = voiceWakeMode == VoiceWakeMode.Foreground,
@@ -357,10 +509,8 @@ fun SettingsSheet(viewModel: MainViewModel) {
             },
           )
           ListItem(
-            modifier = settingsRowModifier(),
-            colors = listItemColors,
-            headlineContent = { Text("Always", style = mobileHeadline) },
-            supportingContent = { Text("Keeps listening in the background (shows a persistent notification).", style = mobileCallout) },
+            headlineContent = { Text("Always") },
+            supportingContent = { Text("Keeps listening in the background (shows a persistent notification).") },
             trailingContent = {
               RadioButton(
                 selected = voiceWakeMode == VoiceWakeMode.Always,
@@ -381,7 +531,7 @@ fun SettingsSheet(viewModel: MainViewModel) {
       OutlinedTextField(
         value = wakeWordsText,
         onValueChange = setWakeWordsText,
-        label = { Text("Wake Words (comma-separated)", style = mobileCaption1, color = mobileTextSecondary) },
+        label = { Text("Wake Words (comma-separated)") },
         modifier =
           Modifier.fillMaxWidth().onFocusChanged { focusState ->
             if (focusState.isFocused) {
@@ -400,19 +550,9 @@ fun SettingsSheet(viewModel: MainViewModel) {
               focusManager.clearFocus()
             },
           ),
-        textStyle = mobileBody.copy(color = mobileText),
-        colors = settingsTextFieldColors(),
       )
     }
-      item {
-        Button(
-          onClick = viewModel::resetWakeWordsDefaults,
-          colors = settingsPrimaryButtonColors(),
-          shape = RoundedCornerShape(14.dp),
-        ) {
-          Text("Reset defaults", style = mobileCallout.copy(fontWeight = FontWeight.Bold))
-        }
-      }
+    item { Button(onClick = viewModel::resetWakeWordsDefaults) { Text("Reset defaults") } }
     item {
       Text(
         if (isConnected) {
@@ -420,48 +560,32 @@ fun SettingsSheet(viewModel: MainViewModel) {
         } else {
           "Connect to a gateway to sync wake words globally."
         },
-        style = mobileCallout,
-        color = mobileTextSecondary,
+        color = MaterialTheme.colorScheme.onSurfaceVariant,
       )
     }
 
-      item { HorizontalDivider(color = mobileBorder) }
+    item { HorizontalDivider() }
 
     // Camera
-      item {
-        Text(
-          "CAMERA",
-          style = mobileCaption1.copy(fontWeight = FontWeight.Bold, letterSpacing = 1.sp),
-          color = mobileAccent,
-        )
-      }
+    item { Text("Camera", style = MaterialTheme.typography.titleSmall) }
     item {
       ListItem(
-        modifier = settingsRowModifier(),
-        colors = listItemColors,
-        headlineContent = { Text("Allow Camera", style = mobileHeadline) },
-        supportingContent = { Text("Allows the gateway to request photos or short video clips (foreground only).", style = mobileCallout) },
+        headlineContent = { Text("Allow Camera") },
+        supportingContent = { Text("Allows the gateway to request photos or short video clips (foreground only).") },
         trailingContent = { Switch(checked = cameraEnabled, onCheckedChange = ::setCameraEnabledChecked) },
       )
     }
     item {
       Text(
         "Tip: grant Microphone permission for video clips with audio.",
-        style = mobileCallout,
-        color = mobileTextSecondary,
+        color = MaterialTheme.colorScheme.onSurfaceVariant,
       )
     }
 
-      item { HorizontalDivider(color = mobileBorder) }
+    item { HorizontalDivider() }
 
     // Messaging
-      item {
-        Text(
-          "MESSAGING",
-          style = mobileCaption1.copy(fontWeight = FontWeight.Bold, letterSpacing = 1.sp),
-          color = mobileAccent,
-        )
-      }
+    item { Text("Messaging", style = MaterialTheme.typography.titleSmall) }
     item {
       val buttonLabel =
         when {
@@ -470,9 +594,7 @@ fun SettingsSheet(viewModel: MainViewModel) {
           else -> "Grant"
         }
       ListItem(
-        modifier = settingsRowModifier(),
-        colors = listItemColors,
-        headlineContent = { Text("SMS Permission", style = mobileHeadline) },
+        headlineContent = { Text("SMS Permission") },
         supportingContent = {
           Text(
             if (smsPermissionAvailable) {
@@ -480,7 +602,6 @@ fun SettingsSheet(viewModel: MainViewModel) {
             } else {
               "SMS requires a device with telephony hardware."
             },
-            style = mobileCallout,
           )
         },
         trailingContent = {
@@ -494,125 +615,91 @@ fun SettingsSheet(viewModel: MainViewModel) {
               }
             },
             enabled = smsPermissionAvailable,
-            colors = settingsPrimaryButtonColors(),
-            shape = RoundedCornerShape(14.dp),
           ) {
-            Text(buttonLabel, style = mobileCallout.copy(fontWeight = FontWeight.Bold))
+            Text(buttonLabel)
           }
         },
       )
     }
 
-      item { HorizontalDivider(color = mobileBorder) }
+    item { HorizontalDivider() }
 
     // Location
-      item {
-        Text(
-          "LOCATION",
-          style = mobileCaption1.copy(fontWeight = FontWeight.Bold, letterSpacing = 1.sp),
-          color = mobileAccent,
+    item { Text("Location", style = MaterialTheme.typography.titleSmall) }
+    item {
+      Column(verticalArrangement = Arrangement.spacedBy(6.dp), modifier = Modifier.fillMaxWidth()) {
+        ListItem(
+          headlineContent = { Text("Off") },
+          supportingContent = { Text("Disable location sharing.") },
+          trailingContent = {
+            RadioButton(
+              selected = locationMode == LocationMode.Off,
+              onClick = { viewModel.setLocationMode(LocationMode.Off) },
+            )
+          },
+        )
+        ListItem(
+          headlineContent = { Text("While Using") },
+          supportingContent = { Text("Only while OpenClaw is open.") },
+          trailingContent = {
+            RadioButton(
+              selected = locationMode == LocationMode.WhileUsing,
+              onClick = { requestLocationPermissions(LocationMode.WhileUsing) },
+            )
+          },
+        )
+        ListItem(
+          headlineContent = { Text("Always") },
+          supportingContent = { Text("Allow background location (requires system permission).") },
+          trailingContent = {
+            RadioButton(
+              selected = locationMode == LocationMode.Always,
+              onClick = { requestLocationPermissions(LocationMode.Always) },
+            )
+          },
         )
       }
-      item {
-        Column(modifier = settingsRowModifier(), verticalArrangement = Arrangement.spacedBy(0.dp)) {
-          ListItem(
-            modifier = Modifier.fillMaxWidth(),
-            colors = listItemColors,
-            headlineContent = { Text("Off", style = mobileHeadline) },
-            supportingContent = { Text("Disable location sharing.", style = mobileCallout) },
-            trailingContent = {
-              RadioButton(
-                selected = locationMode == LocationMode.Off,
-                onClick = { viewModel.setLocationMode(LocationMode.Off) },
-              )
-            },
+    }
+    item {
+      ListItem(
+        headlineContent = { Text("Precise Location") },
+        supportingContent = { Text("Use precise GPS when available.") },
+        trailingContent = {
+          Switch(
+            checked = locationPreciseEnabled,
+            onCheckedChange = ::setPreciseLocationChecked,
+            enabled = locationMode != LocationMode.Off,
           )
-          HorizontalDivider(color = mobileBorder)
-          ListItem(
-            modifier = Modifier.fillMaxWidth(),
-            colors = listItemColors,
-            headlineContent = { Text("While Using", style = mobileHeadline) },
-            supportingContent = { Text("Only while OpenClaw is open.", style = mobileCallout) },
-            trailingContent = {
-              RadioButton(
-                selected = locationMode == LocationMode.WhileUsing,
-                onClick = { requestLocationPermissions(LocationMode.WhileUsing) },
-              )
-            },
-          )
-          HorizontalDivider(color = mobileBorder)
-          ListItem(
-            modifier = Modifier.fillMaxWidth(),
-            colors = listItemColors,
-            headlineContent = { Text("Always", style = mobileHeadline) },
-            supportingContent = { Text("Allow background location (requires system permission).", style = mobileCallout) },
-            trailingContent = {
-              RadioButton(
-                selected = locationMode == LocationMode.Always,
-                onClick = { requestLocationPermissions(LocationMode.Always) },
-              )
-            },
-          )
-          HorizontalDivider(color = mobileBorder)
-          ListItem(
-            modifier = Modifier.fillMaxWidth(),
-            colors = listItemColors,
-            headlineContent = { Text("Precise Location", style = mobileHeadline) },
-            supportingContent = { Text("Use precise GPS when available.", style = mobileCallout) },
-            trailingContent = {
-              Switch(
-                checked = locationPreciseEnabled,
-                onCheckedChange = ::setPreciseLocationChecked,
-                enabled = locationMode != LocationMode.Off,
-              )
-            },
-          )
-        }
-      }
+        },
+      )
+    }
     item {
       Text(
         "Always may require Android Settings to allow background location.",
-        style = mobileCallout,
-        color = mobileTextSecondary,
+        color = MaterialTheme.colorScheme.onSurfaceVariant,
       )
     }
 
-      item { HorizontalDivider(color = mobileBorder) }
+    item { HorizontalDivider() }
 
     // Screen
-      item {
-        Text(
-          "SCREEN",
-          style = mobileCaption1.copy(fontWeight = FontWeight.Bold, letterSpacing = 1.sp),
-          color = mobileAccent,
-        )
-      }
+    item { Text("Screen", style = MaterialTheme.typography.titleSmall) }
     item {
       ListItem(
-        modifier = settingsRowModifier(),
-        colors = listItemColors,
-        headlineContent = { Text("Prevent Sleep", style = mobileHeadline) },
-        supportingContent = { Text("Keeps the screen awake while OpenClaw is open.", style = mobileCallout) },
+        headlineContent = { Text("Prevent Sleep") },
+        supportingContent = { Text("Keeps the screen awake while OpenClaw is open.") },
         trailingContent = { Switch(checked = preventSleep, onCheckedChange = viewModel::setPreventSleep) },
       )
     }
 
-      item { HorizontalDivider(color = mobileBorder) }
+    item { HorizontalDivider() }
 
     // Debug
-      item {
-        Text(
-          "DEBUG",
-          style = mobileCaption1.copy(fontWeight = FontWeight.Bold, letterSpacing = 1.sp),
-          color = mobileAccent,
-        )
-      }
+    item { Text("Debug", style = MaterialTheme.typography.titleSmall) }
     item {
       ListItem(
-        modifier = settingsRowModifier(),
-        colors = listItemColors,
-        headlineContent = { Text("Debug Canvas Status", style = mobileHeadline) },
-        supportingContent = { Text("Show status text in the canvas when debug is enabled.", style = mobileCallout) },
+        headlineContent = { Text("Debug Canvas Status") },
+        supportingContent = { Text("Show status text in the canvas when debug is enabled.") },
         trailingContent = {
           Switch(
             checked = canvasDebugStatusEnabled,
@@ -622,46 +709,9 @@ fun SettingsSheet(viewModel: MainViewModel) {
       )
     }
 
-      item { Spacer(modifier = Modifier.height(24.dp)) }
-    }
+    item { Spacer(modifier = Modifier.height(20.dp)) }
   }
 }
-
-@Composable
-private fun settingsTextFieldColors() =
-  OutlinedTextFieldDefaults.colors(
-    focusedContainerColor = mobileSurface,
-    unfocusedContainerColor = mobileSurface,
-    focusedBorderColor = mobileAccent,
-    unfocusedBorderColor = mobileBorder,
-    focusedTextColor = mobileText,
-    unfocusedTextColor = mobileText,
-    cursorColor = mobileAccent,
-  )
-
-private fun settingsRowModifier() =
-  Modifier
-    .fillMaxWidth()
-    .border(width = 1.dp, color = mobileBorder, shape = RoundedCornerShape(14.dp))
-    .background(Color.White, RoundedCornerShape(14.dp))
-
-@Composable
-private fun settingsPrimaryButtonColors() =
-  ButtonDefaults.buttonColors(
-    containerColor = mobileAccent,
-    contentColor = Color.White,
-    disabledContainerColor = mobileAccent.copy(alpha = 0.45f),
-    disabledContentColor = Color.White.copy(alpha = 0.9f),
-  )
-
-@Composable
-private fun settingsDangerButtonColors() =
-  ButtonDefaults.buttonColors(
-    containerColor = mobileDanger,
-    contentColor = Color.White,
-    disabledContainerColor = mobileDanger.copy(alpha = 0.45f),
-    disabledContentColor = Color.White.copy(alpha = 0.9f),
-  )
 
 private fun openAppSettings(context: Context) {
   val intent =

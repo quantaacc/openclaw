@@ -69,25 +69,14 @@ async function runSendAction(opts: Record<string, unknown> = {}) {
   await expect(runMessageAction("send", { ...baseSendOptions, ...opts })).rejects.toThrow("exit");
 }
 
-function expectNoAccountFieldInPassedOptions() {
-  const passedOpts = (
-    messageCommandMock.mock.calls as unknown as Array<[Record<string, unknown>]>
-  )?.[0]?.[0];
-  expect(passedOpts).toBeTruthy();
-  if (!passedOpts) {
-    throw new Error("expected message command call");
-  }
-  expect(passedOpts).not.toHaveProperty("account");
-}
-
 describe("runMessageAction", () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    messageCommandMock.mockClear().mockResolvedValue(undefined);
-    hasHooksMock.mockClear().mockReturnValue(false);
-    runGatewayStopMock.mockClear().mockResolvedValue(undefined);
+    messageCommandMock.mockReset().mockResolvedValue(undefined);
+    hasHooksMock.mockReset().mockReturnValue(false);
+    runGatewayStopMock.mockReset().mockResolvedValue(undefined);
     runGlobalGatewayStopSafelyMock.mockClear();
-    exitMock.mockClear().mockImplementation((): never => {
+    exitMock.mockReset().mockImplementation((): never => {
       throw new Error("exit");
     });
   });
@@ -156,7 +145,7 @@ describe("runMessageAction", () => {
 
   it("does not call exit(0) if the error path returns", async () => {
     messageCommandMock.mockRejectedValueOnce(new Error("boom"));
-    exitMock.mockClear().mockImplementation(() => undefined as never);
+    exitMock.mockReset().mockImplementation(() => undefined as never);
     const runMessageAction = createRunMessageAction();
     await expect(runMessageAction("send", baseSendOptions)).resolves.toBeUndefined();
 
@@ -191,7 +180,14 @@ describe("runMessageAction", () => {
       expect.anything(),
     );
     // account key should be stripped in favor of accountId
-    expectNoAccountFieldInPassedOptions();
+    const passedOpts = (
+      messageCommandMock.mock.calls as unknown as Array<[Record<string, unknown>]>
+    )?.[0]?.[0];
+    expect(passedOpts).toBeTruthy();
+    if (!passedOpts) {
+      throw new Error("expected message command call");
+    }
+    expect(passedOpts).not.toHaveProperty("account");
   });
 
   it("strips non-string account values instead of passing accountId", async () => {
@@ -216,6 +212,13 @@ describe("runMessageAction", () => {
       expect.anything(),
       expect.anything(),
     );
-    expectNoAccountFieldInPassedOptions();
+    const passedOpts = (
+      messageCommandMock.mock.calls as unknown as Array<[Record<string, unknown>]>
+    )?.[0]?.[0];
+    expect(passedOpts).toBeTruthy();
+    if (!passedOpts) {
+      throw new Error("expected message command call");
+    }
+    expect(passedOpts).not.toHaveProperty("account");
   });
 });
